@@ -1,20 +1,21 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ToLevel1 : MonoBehaviour
+public class ToLevel2 : MonoBehaviour
 {
+
     public delegate void insideLevel();
-    public static event insideLevel inLevel1;
+    public static event insideLevel inLevel2;
 
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Level2");
 
-            inLevel1.Invoke();
+            inLevel2.Invoke();
 
-            Debug.Log("In Level 1!");
+            Debug.Log("In Level 2!");
         }
     }
 }
