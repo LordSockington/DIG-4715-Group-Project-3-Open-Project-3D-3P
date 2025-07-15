@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,9 @@ public class PlayerController : MonoBehaviour
 
     public float jumpForce = 5;
     public float moveSpeed = 1;
+
+    // Time between each attack
+    private float attackTimer = 0.0f;
 
     private CharacterController characterController;
 
@@ -26,13 +30,35 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         PlayerMovement();
+
+        // Resets attackTimer back to 0 after attack is used.
+        if(attackTimer < 1)
+        {
+            attackTimer += Time.deltaTime;
+
+            Mathf.Clamp(attackTimer, 0, 1);
+
+            // Sets attackTimer to 1 in case of overflow
+            if (attackTimer > 1)
+                attackTimer = 1;
+        }
     }
 
     //Moves the character around, both pc and xbox support
     void OnMove(InputValue move)
     {
         moveInput = move.Get<Vector2>();
-        Debug.Log(moveInput);
+        //Debug.Log(moveInput);
+    }
+
+    void OnAttack(InputValue attack)
+    {
+        if (attackTimer == 1)
+        {
+            attackTimer = 0;
+            StartCoroutine(PlayerAttack1());
+        }
+
     }
 
     /* For if we are going to be able to look around
@@ -52,6 +78,16 @@ public class PlayerController : MonoBehaviour
         characterController.SimpleMove(movement * moveSpeed);
     }
 
+    // Functionality for first player attack.
+    IEnumerator PlayerAttack1()
+    {
+        transform.GetChild(0).gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(0.5f);
+
+        transform.GetChild(0).gameObject.SetActive(false);
+    }
+
     //Allows the character to jump, both pc and xbox support
     //Need to add the jumping part, unsure if able to do with navmeshagent or have to use rigidbody which has weird results when used with navmeshagent
     //Doesn't work right now, and not sure if needed anyway.
@@ -60,12 +96,11 @@ public class PlayerController : MonoBehaviour
     {
         if (jump.isPressed)
         {
-            rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
-            Debug.Log("Jumped!");
+            //playerVelocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
         }
 
     }
-    */ 
+    */
 
 
 }
