@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 119888125}
   m_Layer: 0
-  m_Name: Level2Check
+  m_Name: LevelSentaiCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 214948442}
   m_Layer: 0
-  m_Name: Level1Check
+  m_Name: LevelWesternCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,11 +231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4872925411931086637, guid: 5d2a07a875723534d887e374b44d6bec, type: 3}
       propertyPath: m_Name
-      value: Level2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7966914068411044047, guid: 5d2a07a875723534d887e374b44d6bec, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
+      value: LevelSentai
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -292,11 +288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2176166707165025542, guid: 9d71c6cc379bc4f449c75e68dd38b03a, type: 3}
       propertyPath: m_Name
-      value: Level3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248138853365789170, guid: 9d71c6cc379bc4f449c75e68dd38b03a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
+      value: LevelNoir
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -445,10 +437,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 47883044734965012, guid: ab130d82bbc8f3b4d85dfe028989f4cc, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 403458597719116021, guid: ab130d82bbc8f3b4d85dfe028989f4cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -491,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817002775695206202, guid: ab130d82bbc8f3b4d85dfe028989f4cc, type: 3}
       propertyPath: m_Name
-      value: Level1
+      value: LevelWestern
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -528,9 +516,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   check: {fileID: 3359696569655219067, guid: 163c70e58c8ce264b9d98e6a8cf9de5c, type: 3}
-  level1Check: {fileID: 214948441}
-  level2Check: {fileID: 119888124}
-  level3Check: {fileID: 1859846441}
+  levelWesternCheck: {fileID: 214948441}
+  levelSentaiCheck: {fileID: 119888124}
+  levelNoirCheck: {fileID: 1859846441}
 --- !u!4 &1354550928
 Transform:
   m_ObjectHideFlags: 0
@@ -819,7 +807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1859846442}
   m_Layer: 0
-  m_Name: Level3Check
+  m_Name: LevelNoirCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

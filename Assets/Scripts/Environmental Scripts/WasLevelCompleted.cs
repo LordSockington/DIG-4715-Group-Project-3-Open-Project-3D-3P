@@ -3,7 +3,7 @@ using UnityEngine;
 public class WasLevelCompleted : MonoBehaviour
 {
     [SerializeField]
-    private GameObject check, level1Check, level2Check, level3Check;
+    private GameObject check, levelWesternCheck, levelSentaiCheck, levelNoirCheck;
 
     void Awake()
     {
@@ -12,22 +12,22 @@ public class WasLevelCompleted : MonoBehaviour
 
     void PlaceChecks()
     {
-        if (GameManagment.westHat == true)
+        if (GameManagment.westernHat == true)
         {
             Instantiate(check);
-            check.transform.position = level1Check.transform.position;
+            check.transform.position = levelWesternCheck.transform.position;
         }
 
         if (GameManagment.sentaiHat == true)
         {
             Instantiate(check);
-            check.transform.position = level2Check.transform.position;
+            check.transform.position = levelSentaiCheck.transform.position;
         }
 
         if (GameManagment.noirHat == true)
         {
             Instantiate(check);
-            check.transform.position = level3Check.transform.position;
+            check.transform.position = levelNoirCheck.transform.position;
         }
     }
 }

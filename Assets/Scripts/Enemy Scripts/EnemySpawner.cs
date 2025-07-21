@@ -6,22 +6,22 @@ public class EnemySpawner : MonoBehaviour
     private GameObject player;
 
     [SerializeField]
-    private GameObject enemy1;
-    private GameObject enemy2;
-    private GameObject enemy3;
+    private GameObject enemyWestern;
+    private GameObject enemySentai;
+    private GameObject enemyNoir;
 
     private bool canSpawnEnemies = false;
-    private bool level1Enemies = false;
-    private bool level2Enemies = false;
-    private bool level3Enemies = false;
+    private bool levelWesternEnemies = false;
+    private bool levelSentaiEnemies = false;
+    private bool levelNoirEnemies = false;
 
 
 
     void Awake()
     {
-        ToLevel1.inLevel1 += level1;
-        ToLevel2.inLevel2 += level2;
-        ToLevel3.inLevel3 += level3;
+        ToLevelWestern.inLevelWestern += levelWestern;
+        ToLevelSentai.inLevelSentai += levelSentai;
+        ToLevelNoir.inLevelNoir += levelNoir;
         ToHub.inHub += StopSpawn;
     }
 
@@ -44,36 +44,36 @@ public class EnemySpawner : MonoBehaviour
     {
         if (canSpawnEnemies == true)
         {
-            if (level1Enemies == true)
+            if (levelWesternEnemies == true)
             {
-                Invoke("SpawnsEnemy1", 5);
+                Invoke("SpawnsEnemyWestern", 5);
             }
-            if (level2Enemies == true)
+            if (levelSentaiEnemies == true)
             {
-                Invoke("SpawnsEnemy2", 5);
+                Invoke("SpawnsEnemySentai", 5);
             }
-            if (level3Enemies == true)
+            if (levelNoirEnemies == true)
             {
-                Invoke("SpawnsEnemy3", 5);
+                Invoke("SpawnsEnemyNoir", 5);
             }            
         }
     }
 
-    void SpawnsEnemy1()
+    void SpawnsEnemyWestern()
     {
-        Instantiate(enemy1);
+        Instantiate(enemyWestern);
         Invoke("Wait", 0);
     }
 
-    void SpawnsEnemy2()
+    void SpawnsEnemySentai()
     {
-        Instantiate(enemy2);
+        Instantiate(enemySentai);
         Invoke("Wait", 0);
     }
 
-    void SpawnsEnemy3()
+    void SpawnsEnemyNoir()
     {
-        Instantiate(enemy3);
+        Instantiate(enemyNoir);
         Invoke("Wait", 0);
     }
 
@@ -82,26 +82,27 @@ public class EnemySpawner : MonoBehaviour
         canSpawnEnemies = false;
     }
 
-    void level1()
+    void levelWestern()
     {
-        level1Enemies = true;
-        level2Enemies = false;
+        levelWesternEnemies = true;
+        levelSentaiEnemies = false;
+        levelNoirEnemies = false;
         canSpawnEnemies = true;
     }
 
-    void level2()
+    void levelSentai()
     {
-        level1Enemies = false;
-        level2Enemies = true;
-        level3Enemies = false;
+        levelWesternEnemies = false;
+        levelSentaiEnemies = true;
+        levelNoirEnemies = false;
         canSpawnEnemies = true;
     }
 
-    void level3()
+    void levelNoir()
     {
-        level1Enemies = false;
-        level2Enemies = false;
-        level3Enemies = true;
+        levelWesternEnemies = false;
+        levelSentaiEnemies = false;
+        levelNoirEnemies = true;
         canSpawnEnemies = true;
     }
 
