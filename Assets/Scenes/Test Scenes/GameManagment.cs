@@ -5,6 +5,8 @@ public class GameManagment : MonoBehaviour
     //Names game manager
     public static GameManagment manager;
 
+    public static bool westHat, sentaiHat, noirHat;
+
     void Awake()
     {
         //If game manager does not exist, do this:
@@ -19,6 +21,11 @@ public class GameManagment : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        WesternHat.WesternHatGot += Level1Done;
+        SentaiHat.SentaiHatGot += Level2Done;
+        NoirHat.NoirHatGot += Level3Done;
+
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,4 +38,21 @@ public class GameManagment : MonoBehaviour
     {
         
     }
+
+    void Level1Done()
+    {
+        westHat = true;
+    }
+
+    void Level2Done()
+    {
+        sentaiHat = true;
+    }
+
+    void Level3Done()
+    {
+        noirHat = true;
+    }
+
+
 }

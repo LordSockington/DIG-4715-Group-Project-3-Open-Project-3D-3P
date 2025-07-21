@@ -85,17 +85,22 @@ public class EnemySpawner : MonoBehaviour
     void level1()
     {
         level1Enemies = true;
+        level2Enemies = false;
         canSpawnEnemies = true;
     }
 
     void level2()
     {
+        level1Enemies = false;
         level2Enemies = true;
+        level3Enemies = false;
         canSpawnEnemies = true;
     }
 
     void level3()
     {
+        level1Enemies = false;
+        level2Enemies = false;
         level3Enemies = true;
         canSpawnEnemies = true;
     }

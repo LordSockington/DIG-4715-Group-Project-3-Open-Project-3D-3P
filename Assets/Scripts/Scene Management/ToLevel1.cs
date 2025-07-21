@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class ToLevel1 : MonoBehaviour
 {
-    public delegate void insideLevel();
-    public static event insideLevel inLevel1;
+    public delegate void insideLevel1();
+    public static event insideLevel1 inLevel1;
 
     void OnCollisionEnter(Collision collision)
     {
