@@ -7,9 +7,9 @@ public class ToLevelSentai : MonoBehaviour
     public delegate void insideLevelSentai();
     public static event insideLevelSentai inLevelSentai;
 
-    void OnCollisionEnter(Collision collision)
+    void OnColliderEnter(Collider collider)
     {
-        if (collision.gameObject.tag == "Player" && GameManagment.sentaiHat == false)
+        if (collider.gameObject.tag == "Player" && GameManagment.sentaiHat == false)
         {
             SceneManager.LoadScene("LevelSentai");
 

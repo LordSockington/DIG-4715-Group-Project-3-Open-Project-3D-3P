@@ -7,9 +7,9 @@ public class ToLevelNoir : MonoBehaviour
     public delegate void insideLevelNoir();
     public static event insideLevelNoir inLevelNoir;
 
-    void OnCollisionEnter(Collision collision)
+    void OnColliderEnter(Collider collider)
     {
-        if (collision.gameObject.tag == "Player" && GameManagment.noirHat == false)
+        if (collider.gameObject.tag == "Player" && GameManagment.noirHat == false)
         {
             SceneManager.LoadScene("LevelNoir");
 

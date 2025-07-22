@@ -22,14 +22,14 @@ public class EnemyBrain : MonoBehaviour
 
     void Update()
     {
-        // enemy.SetDestination(player.transform.position);    Uncomment if we want the enemies to always follow the player no matter where
+         enemy.SetDestination(player.transform.position);    //Uncomment if we want the enemies to always follow the player no matter where
     }
 
     void OnTriggerStay(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
         {
-            enemy.SetDestination(player.transform.position); //Comment this line if you want the enemies to always follow the player no matter where
+            //enemy.SetDestination(player.transform.position); //Comment this line if you want the enemies to always follow the player no matter where
         }
     }
 }

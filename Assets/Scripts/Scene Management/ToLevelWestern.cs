@@ -6,9 +6,9 @@ public class ToLevelWestern : MonoBehaviour
     public delegate void insideLevelWestern();
     public static event insideLevelWestern inLevelWestern;
 
-    void OnCollisionEnter(Collision collision)
+    void OnColliderEnter(Collider collider)
     {
-        if (collision.gameObject.tag == "Player" && GameManagment.westernHat == false)
+        if (collider.gameObject.tag == "Player" && GameManagment.westernHat == false)
         {
             SceneManager.LoadScene("LevelWestern");
 

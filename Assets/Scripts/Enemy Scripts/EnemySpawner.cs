@@ -6,24 +6,9 @@ public class EnemySpawner : MonoBehaviour
     private GameObject player;
 
     [SerializeField]
-    private GameObject enemyWestern;
-    private GameObject enemySentai;
-    private GameObject enemyNoir;
+    private GameObject levelEnemy, enemySpawnLocation;
 
-    private bool canSpawnEnemies = false;
-    private bool levelWesternEnemies = false;
-    private bool levelSentaiEnemies = false;
-    private bool levelNoirEnemies = false;
-
-
-
-    void Awake()
-    {
-        ToLevelWestern.inLevelWestern += levelWestern;
-        ToLevelSentai.inLevelSentai += levelSentai;
-        ToLevelNoir.inLevelNoir += levelNoir;
-        ToHub.inHub += StopSpawn;
-    }
+    private bool canSpawnEnemies = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,66 +29,36 @@ public class EnemySpawner : MonoBehaviour
     {
         if (canSpawnEnemies == true)
         {
-            if (levelWesternEnemies == true)
-            {
-                Invoke("SpawnsEnemyWestern", 5);
-            }
-            if (levelSentaiEnemies == true)
-            {
-                Invoke("SpawnsEnemySentai", 5);
-            }
-            if (levelNoirEnemies == true)
-            {
-                Invoke("SpawnsEnemyNoir", 5);
-            }            
+            Invoke("SpawnsEnemy", 5);
         }
     }
 
-    void SpawnsEnemyWestern()
+    void SpawnsEnemy()
     {
-        Instantiate(enemyWestern);
-        Invoke("Wait", 0);
+        if (canSpawnEnemies == true)
+        {
+            Instantiate(levelEnemy, new Vector3 (enemySpawnLocation.transform.position.x, enemySpawnLocation.transform.position.y, enemySpawnLocation.transform.position.z), Quaternion.identity);
+            Invoke("Wait", 0);
+        }
     }
 
-    void SpawnsEnemySentai()
+    void OnTriggerEnter(Collider trigger)
     {
-        Instantiate(enemySentai);
-        Invoke("Wait", 0);
+        if (trigger.gameObject.tag == "Player")
+        {
+            canSpawnEnemies = false;
+            Debug.Log("Spawn Off");
+        }
     }
 
-    void SpawnsEnemyNoir()
+    void OnTriggerExit(Collider trigger)
     {
-        Instantiate(enemyNoir);
-        Invoke("Wait", 0);
-    }
-
-    void StopSpawn()
-    {
-        canSpawnEnemies = false;
-    }
-
-    void levelWestern()
-    {
-        levelWesternEnemies = true;
-        levelSentaiEnemies = false;
-        levelNoirEnemies = false;
-        canSpawnEnemies = true;
-    }
-
-    void levelSentai()
-    {
-        levelWesternEnemies = false;
-        levelSentaiEnemies = true;
-        levelNoirEnemies = false;
-        canSpawnEnemies = true;
-    }
-
-    void levelNoir()
-    {
-        levelWesternEnemies = false;
-        levelSentaiEnemies = false;
-        levelNoirEnemies = true;
-        canSpawnEnemies = true;
+        if (trigger.gameObject.tag == "Player")
+        {
+            canSpawnEnemies = true;
+            Debug.Log("Spawn On");
+            Invoke("Wait", 0);
+        }
     }
 
 }
