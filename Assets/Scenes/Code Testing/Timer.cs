@@ -7,8 +7,8 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     //Sets Variables
-    [SerializeField] TextMeshProGUI timerText;
-    [SerializeField] float timeLeft;
+    [SerializeField] TextMeshProUGUI timerText;
+    [SerializeField] float timeLeft = 60;
 
     // Update is called once per frame
     void Update()
@@ -21,10 +21,10 @@ public class Timer : MonoBehaviour
         {
             timeLeft = 0;
             //Add game over function here
-            timerText.color = color.red;
+            timerText.color = Color.red;
         }
-        int minutes = Mathf.FlooToInt(timeLeft / 60);
-        int seconds = Mathf.FlooToInt(timeLeft % 60);
+        int minutes = Mathf.FloorToInt(timeLeft / 60);
+        int seconds = Mathf.FloorToInt(timeLeft % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }
