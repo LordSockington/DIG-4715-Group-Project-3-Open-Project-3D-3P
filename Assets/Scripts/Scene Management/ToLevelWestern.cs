@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class ToLevelWestern : MonoBehaviour
 {
-
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Player" && GameManagment.westernHat == false)

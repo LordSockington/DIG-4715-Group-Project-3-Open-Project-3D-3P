@@ -8,7 +8,6 @@ public class EnemyBrain : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
-
     void Start()
     {
         enemy = GetComponent<UnityEngine.AI.NavMeshAgent>();
@@ -17,7 +16,6 @@ public class EnemyBrain : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player");
         }
-
     }
 
     void Update()

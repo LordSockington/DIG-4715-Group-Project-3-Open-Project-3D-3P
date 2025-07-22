@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class ToLevelNoir : MonoBehaviour
 {
-
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Player" && GameManagment.noirHat == false)

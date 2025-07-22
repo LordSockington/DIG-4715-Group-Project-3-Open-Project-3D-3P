@@ -28,17 +28,6 @@ public class GameManagment : MonoBehaviour
         NoirHat.NoirHatGot += LevelNoirDone;
 
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     void LevelWesternDone()
     {
@@ -54,6 +43,5 @@ public class GameManagment : MonoBehaviour
     {
         noirHat = true;
     }
-
 
 }

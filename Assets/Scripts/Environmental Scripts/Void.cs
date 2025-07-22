@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class Void : MonoBehaviour
 {
-
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
@@ -12,5 +11,4 @@ public class Void : MonoBehaviour
             SceneManager.LoadScene(currentSceneName);
         }
     }
-
 }

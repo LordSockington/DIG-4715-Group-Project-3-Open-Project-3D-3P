@@ -22,7 +22,6 @@ public class EnemySpawner : MonoBehaviour
         Invoke("Wait", 0); //Starts spawning loop
 
         //Invoke("StopSpawn", 60); //For if we want the player to fight enemies for a set amount of time, if the player needs to get to the end then this is not needed.
-
     }
 
     void Wait()
@@ -60,5 +59,4 @@ public class EnemySpawner : MonoBehaviour
             Invoke("Wait", 0);
         }
     }
-
 }

@@ -10,15 +10,12 @@ public class ToHub : MonoBehaviour
             if (GameManagment.westernHat == true && GameManagment.sentaiHat == true && GameManagment.noirHat == true)
             {
                 SceneManager.LoadScene("WinScreen");
-
             }
             else
             {
                 SceneManager.LoadScene("MainHub");
                 Debug.Log("In the Hub!");
             }
-
         }
     }
-
 }
