@@ -14,20 +14,17 @@ public class WasLevelCompleted : MonoBehaviour
     {
         if (GameManagment.westernHat == true)
         {
-            Instantiate(check);
-            check.transform.position = levelWesternCheck.transform.position;
+            Instantiate(check, new Vector3 (levelWesternCheck.transform.position.x, levelWesternCheck.transform.position.y, levelWesternCheck.transform.position.z), Quaternion.identity);
         }
 
         if (GameManagment.sentaiHat == true)
         {
-            Instantiate(check);
-            check.transform.position = levelSentaiCheck.transform.position;
+            Instantiate(check, new Vector3(levelSentaiCheck.transform.position.x, levelSentaiCheck.transform.position.y, levelSentaiCheck.transform.position.z), Quaternion.identity);
         }
 
         if (GameManagment.noirHat == true)
         {
-            Instantiate(check);
-            check.transform.position = levelNoirCheck.transform.position;
+            Instantiate(check, new Vector3(levelNoirCheck.transform.position.x, levelNoirCheck.transform.position.y, levelNoirCheck.transform.position.z), Quaternion.identity);
         }
     }
 }

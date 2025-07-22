@@ -37,10 +37,7 @@ public class GameManagment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (westernHat == true && sentaiHat == true && noirHat == true)
-        {
-            SceneManager.LoadScene("WinScreen");
-        }
+
     }
 
     void LevelWesternDone()

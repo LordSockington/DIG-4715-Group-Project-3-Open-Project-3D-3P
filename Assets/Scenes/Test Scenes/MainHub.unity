@@ -189,6 +189,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1480842236355694078, guid: 5d2a07a875723534d887e374b44d6bec, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2289075461696283152, guid: 5d2a07a875723534d887e374b44d6bec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -233,6 +237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelSentai
       objectReference: {fileID: 0}
+    - target: {fileID: 7966914068411044047, guid: 5d2a07a875723534d887e374b44d6bec, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -246,6 +254,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 554258374618532409, guid: 9d71c6cc379bc4f449c75e68dd38b03a, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1335990786363820826, guid: 9d71c6cc379bc4f449c75e68dd38b03a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
@@ -289,6 +301,10 @@ PrefabInstance:
     - target: {fileID: 2176166707165025542, guid: 9d71c6cc379bc4f449c75e68dd38b03a, type: 3}
       propertyPath: m_Name
       value: LevelNoir
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248138853365789170, guid: 9d71c6cc379bc4f449c75e68dd38b03a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -437,6 +453,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 47883044734965012, guid: ab130d82bbc8f3b4d85dfe028989f4cc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 403458597719116021, guid: ab130d82bbc8f3b4d85dfe028989f4cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -475,6 +495,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 403458597719116021, guid: ab130d82bbc8f3b4d85dfe028989f4cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922968155889914207, guid: ab130d82bbc8f3b4d85dfe028989f4cc, type: 3}
+      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6817002775695206202, guid: ab130d82bbc8f3b4d85dfe028989f4cc, type: 3}
