@@ -21,15 +21,15 @@ MonoBehaviour:
   m_OverrideGlobalSceneList: 1
   m_Scenes:
   - m_enabled: 1
-    m_path: Assets/Scenes/Code Testing/Obie Testing.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/Test Scenes/Level1.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/Test Scenes/Level2.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/Test Scenes/Level3.unity
-  - m_enabled: 1
     m_path: Assets/Scenes/Test Scenes/MainHub.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Test Scenes/LevelWestern.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Test Scenes/LevelSentai.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Test Scenes/LevelNoir.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Test Scenes/WinScreen.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings: []

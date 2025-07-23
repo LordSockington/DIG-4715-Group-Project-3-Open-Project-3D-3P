@@ -6,24 +6,9 @@ public class EnemySpawner : MonoBehaviour
     private GameObject player;
 
     [SerializeField]
-    private GameObject enemy1;
-    private GameObject enemy2;
-    private GameObject enemy3;
+    private GameObject levelEnemy, enemySpawnLocation;
 
-    private bool canSpawnEnemies = false;
-    private bool level1Enemies = false;
-    private bool level2Enemies = false;
-    private bool level3Enemies = false;
-
-
-
-    void Awake()
-    {
-        ToLevel1.inLevel1 += level1;
-        ToLevel2.inLevel2 += level2;
-        ToLevel3.inLevel3 += level3;
-        ToHub.inHub += StopSpawn;
-    }
+    private bool canSpawnEnemies = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,67 +22,41 @@ public class EnemySpawner : MonoBehaviour
         Invoke("Wait", 0); //Starts spawning loop
 
         //Invoke("StopSpawn", 60); //For if we want the player to fight enemies for a set amount of time, if the player needs to get to the end then this is not needed.
-
     }
 
     void Wait()
     {
         if (canSpawnEnemies == true)
         {
-            if (level1Enemies == true)
-            {
-                Invoke("SpawnsEnemy1", 5);
-            }
-            if (level2Enemies == true)
-            {
-                Invoke("SpawnsEnemy2", 5);
-            }
-            if (level3Enemies == true)
-            {
-                Invoke("SpawnsEnemy3", 5);
-            }            
+            Invoke("SpawnsEnemy", 5);
         }
     }
 
-    void SpawnsEnemy1()
+    void SpawnsEnemy()
     {
-        Instantiate(enemy1);
-        Invoke("Wait", 0);
+        if (canSpawnEnemies == true)
+        {
+            Instantiate(levelEnemy, new Vector3 (enemySpawnLocation.transform.position.x, enemySpawnLocation.transform.position.y, enemySpawnLocation.transform.position.z), Quaternion.identity);
+            Invoke("Wait", 0);
+        }
     }
 
-    void SpawnsEnemy2()
+    void OnTriggerEnter(Collider trigger)
     {
-        Instantiate(enemy2);
-        Invoke("Wait", 0);
+        if (trigger.gameObject.tag == "Player")
+        {
+            canSpawnEnemies = false;
+            Debug.Log("Spawn Off");
+        }
     }
 
-    void SpawnsEnemy3()
+    void OnTriggerExit(Collider trigger)
     {
-        Instantiate(enemy3);
-        Invoke("Wait", 0);
+        if (trigger.gameObject.tag == "Player")
+        {
+            canSpawnEnemies = true;
+            Debug.Log("Spawn On");
+            Invoke("Wait", 0);
+        }
     }
-
-    void StopSpawn()
-    {
-        canSpawnEnemies = false;
-    }
-
-    void level1()
-    {
-        level1Enemies = true;
-        canSpawnEnemies = true;
-    }
-
-    void level2()
-    {
-        level2Enemies = true;
-        canSpawnEnemies = true;
-    }
-
-    void level3()
-    {
-        level3Enemies = true;
-        canSpawnEnemies = true;
-    }
-
 }

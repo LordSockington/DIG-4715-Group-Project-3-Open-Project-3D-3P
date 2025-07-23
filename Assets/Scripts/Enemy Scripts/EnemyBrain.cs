@@ -8,7 +8,6 @@ public class EnemyBrain : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
-
     void Start()
     {
         enemy = GetComponent<UnityEngine.AI.NavMeshAgent>();
@@ -17,19 +16,18 @@ public class EnemyBrain : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player");
         }
-
     }
 
     void Update()
     {
-        // enemy.SetDestination(player.transform.position);    Uncomment if we want the enemies to always follow the player no matter where
+         enemy.SetDestination(player.transform.position);    //Uncomment if we want the enemies to always follow the player no matter where
     }
 
     void OnTriggerStay(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
         {
-            enemy.SetDestination(player.transform.position); //Comment this line if you want the enemies to always follow the player no matter where
+            //enemy.SetDestination(player.transform.position); //Comment this line if you want the enemies to always follow the player no matter where
         }
     }
 }
