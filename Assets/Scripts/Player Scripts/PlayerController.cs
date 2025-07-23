@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,25 +15,30 @@ public class PlayerController : MonoBehaviour
     // Time between each attack
     private float attackTimer = 0.0f;
 
-    private CharacterController characterController;
+    //private CharacterController characterController;
+
+    private Rigidbody rb;
+    public float distToGround;
+    public Camera playerCam;
+
+    private Vector3 vertical;
+    private Vector3 horizontal;
 
     void Awake()
     {
-        //rb = GetComponent<Rigidbody>(); Doesn't use a rigidbody right now
-        characterController = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
+        //characterController = GetComponent<CharacterController>();
     }
 
     void Start()
     {
-        
+
     }
 
-    void Update()
+    private void Update()
     {
-        PlayerMovement();
-
         // Resets attackTimer back to 0 after attack is used.
-        if(attackTimer < 1)
+        if (attackTimer < 1)
         {
             attackTimer += Time.deltaTime;
 
@@ -42,6 +48,20 @@ public class PlayerController : MonoBehaviour
             if (attackTimer > 1)
                 attackTimer = 1;
         }
+
+        vertical = playerCam.transform.forward;
+        horizontal = playerCam.transform.right;
+
+        vertical.y = 0f;
+        horizontal.y = 0f;
+
+        vertical.Normalize();
+        horizontal.Normalize();
+    }
+
+    void LateUpdate()
+    { 
+        PlayerMovement();
     }
 
     //Moves the character around, both pc and xbox support
@@ -61,6 +81,12 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, distToGround + 0.1f);
+    }
+
+
     /* For if we are going to be able to look around
     void OnLook(InputValue look)
     {
@@ -74,8 +100,17 @@ public class PlayerController : MonoBehaviour
 
     void PlayerMovement()
     {
+        Vector3 moveDirection = vertical * moveInput.y + horizontal * moveInput.x;
+
         Vector3 movement = new Vector3(moveInput.x, 0.0f, moveInput.y);
-        characterController.SimpleMove(movement * moveSpeed);
+        //characterController.SimpleMove(movement * moveSpeed);
+
+        rb.AddForce(moveDirection * moveSpeed, ForceMode.Acceleration);
+
+        if (movement == Vector3.zero && IsGrounded())
+        {
+            rb.AddForce(-rb.linearVelocity, ForceMode.Acceleration);
+        }
     }
 
     // Functionality for first player attack.
@@ -88,19 +123,16 @@ public class PlayerController : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(false);
     }
 
-    //Allows the character to jump, both pc and xbox support
-    //Need to add the jumping part, unsure if able to do with navmeshagent or have to use rigidbody which has weird results when used with navmeshagent
-    //Doesn't work right now, and not sure if needed anyway.
-    /*
+   //Allows the character to jump, both pc and xbox support
     void OnJump(InputValue jump)
     {
         if (jump.isPressed)
         {
-            //playerVelocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
+            if(IsGrounded())
+                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
 
     }
-    */
 
 
 }
