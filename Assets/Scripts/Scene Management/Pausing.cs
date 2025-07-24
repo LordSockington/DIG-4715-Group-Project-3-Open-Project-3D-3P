@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class Pausing : MonoBehaviour
 {
@@ -13,19 +14,15 @@ public class Pausing : MonoBehaviour
     public delegate void isntPaused();
     public static event isntPaused notPaused;
 
-
-    void Update()
+    void OnPause(InputValue pause)
     {
-        if (Input.GetButtonDown("Pause"))
+        if (isPaused == true)
         {
-            if (isPaused == true)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
+            Resume();
+        }
+        else
+        {
+            Pause();
         }
     }
 
