@@ -13,21 +13,21 @@ public class LevelSwitching : MonoBehaviour
 
     public void LoadWesternLevel()
     {
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Western");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     public void LoadSentaiLevel()
     {
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Sentai");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     public void LoadNoirLevel()
     {
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Noir");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
