@@ -2,27 +2,40 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    public Transform doorMesh;
-    public Vector3 openRotation = new Vector3(0, 90, 0);
-    public float openSpeed = 2f;
+    public Transform doorToRotate;  
+    public Vector3 openRotationOffset = new Vector3(0, 90, 0); 
+    public float openSpeed = 10f;
 
     private bool isOpen = false;
+    private Quaternion closedRotation;
+    private Quaternion openRotation;
+
+    void Start()
+    {
+        if (doorToRotate == null)
+        {
+            Debug.LogError("DoorController: doorToRotate is not assigned.");
+            return;
+        }
+
+        
+        closedRotation = doorToRotate.localRotation;
+
+        
+        openRotation = closedRotation * Quaternion.Euler(openRotationOffset);
+    }
 
     public void ToggleDoor()
     {
         isOpen = !isOpen;
-        Debug.Log(gameObject.name + ": Door is now " + (isOpen ? "OPEN" : "CLOSED"));
+        Debug.Log(" Door toggled: " + (isOpen ? "OPEN" : "CLOSED"));
     }
 
     void Update()
     {
-        if (doorMesh == null)
-        {
-            Debug.LogWarning("doorMesh is not assigned on " + gameObject.name);
-            return;
-        }
+        if (doorToRotate == null) return;
 
-        Quaternion target = Quaternion.Euler(isOpen ? openRotation : Vector3.zero);
-        doorMesh.localRotation = Quaternion.Slerp(doorMesh.localRotation, target, Time.deltaTime * openSpeed);
+        Quaternion target = isOpen ? openRotation : closedRotation;
+        doorToRotate.localRotation = Quaternion.Slerp(doorToRotate.localRotation, target, Time.deltaTime * openSpeed);
     }
 }

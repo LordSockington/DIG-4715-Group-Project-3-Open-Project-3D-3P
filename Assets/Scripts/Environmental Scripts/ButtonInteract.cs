@@ -1,29 +1,36 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ButtonInteract : MonoBehaviour
 {
     public DoorController doorToOpen;
     private bool playerInRange = false;
 
+    private PlayerInputActions inputActions;
+
+    private void Awake()
+    {
+        inputActions = new PlayerInputActions();
+    }
+
+    private void OnEnable()
+    {
+        inputActions.Enable();
+    }
+
+    private void OnDisable()
+    {
+        inputActions.Disable();
+    }
+
     void Update()
     {
-        if (playerInRange)
+        if (playerInRange && inputActions.Player.Interact.triggered)
         {
-            Debug.Log("Player is in range of button: " + gameObject.name);
-        }
-
-        if (playerInRange && Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("E key pressed near button: " + gameObject.name);
-
+            Debug.Log(" Interact pressed (New Input System)");
             if (doorToOpen != null)
             {
-                Debug.Log("Calling ToggleDoor() on: " + doorToOpen.name);
                 doorToOpen.ToggleDoor();
-            }
-            else
-            {
-                Debug.LogWarning("doorToOpen is not assigned on: " + gameObject.name);
             }
         }
     }
@@ -32,7 +39,6 @@ public class ButtonInteract : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player entered trigger for: " + gameObject.name);
             playerInRange = true;
         }
     }
@@ -41,7 +47,6 @@ public class ButtonInteract : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player exited trigger for: " + gameObject.name);
             playerInRange = false;
         }
     }
