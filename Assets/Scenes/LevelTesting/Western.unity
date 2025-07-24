@@ -11345,7 +11345,7 @@ PrefabInstance:
     - target: {fileID: 5686205873238083164, guid: 10f2a25476ed75a4b9a13afde4ed12e3, type: 3}
       propertyPath: pauseMenu
       value: 
-      objectReference: {fileID: 1615094178}
+      objectReference: {fileID: 1437582980}
     - target: {fileID: 5693957401639249511, guid: 10f2a25476ed75a4b9a13afde4ed12e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 116.35
@@ -34178,6 +34178,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435677659}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1437582980 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7740481092169186709, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+  m_PrefabInstance: {fileID: 1615094177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1438427616
 GameObject:
   m_ObjectHideFlags: 0
@@ -38406,11 +38411,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
---- !u!1 &1615094178 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2050587075668738278, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
-  m_PrefabInstance: {fileID: 1615094177}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1622808424
 PrefabInstance:
   m_ObjectHideFlags: 0
