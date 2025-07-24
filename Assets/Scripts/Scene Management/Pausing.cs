@@ -8,11 +8,13 @@ public class Pausing : MonoBehaviour
 
     public static bool isPaused = false;
 
+    /* 
     public delegate void Paused();
     public static event Paused currentlyPaused; // These 2 events are so the camera doesn't move while pause, need to add that I believe
 
     public delegate void isntPaused();
-    public static event isntPaused notPaused;
+    public static event isntPaused notPaused; 
+    */
 
     void OnPause(InputValue pause)
     {
@@ -33,7 +35,7 @@ public class Pausing : MonoBehaviour
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        notPaused.Invoke();
+        //notPaused.Invoke();
     }
 
     void Pause()
@@ -43,7 +45,7 @@ public class Pausing : MonoBehaviour
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        currentlyPaused.Invoke();
+        //currentlyPaused.Invoke();
     }
 
     public void ReturnToMenu()
