@@ -11,6 +11,14 @@ public class LevelSwitching : MonoBehaviour
         Cursor.visible = true;
     }
 
+    public void ReturnToLevelSelect()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     public void LoadWesternLevel()
     {
         SceneManager.LoadScene("Western");
