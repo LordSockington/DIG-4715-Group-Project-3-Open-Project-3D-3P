@@ -114,11 +114,11 @@ public class PlayerController : MonoBehaviour
     // Functionality for first player attack.
     IEnumerator PlayerAttack1()
     {
-        transform.GetChild(0).gameObject.SetActive(true);
+        //transform.GetChild(0).gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.5f);
 
-        transform.GetChild(0).gameObject.SetActive(false);
+        //transform.GetChild(0).gameObject.SetActive(false);
     }
 
    //Allows the character to jump, both pc and xbox support

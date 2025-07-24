@@ -5,6 +5,8 @@ public class EnemyBrain : MonoBehaviour
 {
     private NavMeshAgent enemy;
 
+    public float enemyHealth;
+
     [SerializeField]
     private GameObject player;
 
@@ -21,13 +23,22 @@ public class EnemyBrain : MonoBehaviour
     void Update()
     {
          enemy.SetDestination(player.transform.position);    //Uncomment if we want the enemies to always follow the player no matter where
+
+        if(enemyHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+        Debug.Log(enemyHealth);
     }
 
-    void OnTriggerStay(Collider collider)
+    void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Attack")
         {
-            //enemy.SetDestination(player.transform.position); //Comment this line if you want the enemies to always follow the player no matter where
+            enemyHealth -= 1;
         }
     }
+
+
 }
