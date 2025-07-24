@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     public float jumpForce = 5;
     public float moveSpeed = 1;
+    public float rotationSpeed = 0;
 
     // Time between each attack
     private float attackTimer = 0.0f;
@@ -81,31 +82,28 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    // Check for player contact with the ground to initiate a jump.
     private bool IsGrounded()
     {
         return Physics.Raycast(transform.position, Vector3.down, distToGround + 0.1f);
     }
 
-
-    /* For if we are going to be able to look around
-    void OnLook(InputValue look)
+    // Adjusts rotation of player character
+    private void AdjustRotation(Quaternion newRotate)
     {
-        if (look.isPressed)
-        {
-            lookInput = look.Get<Vector2>();
-            Debug.Log(lookInput);
-        }
+        rb.rotation = newRotate;
     }
-    */
 
+    // Movement logic
     void PlayerMovement()
     {
         Vector3 moveDirection = vertical * moveInput.y + horizontal * moveInput.x;
-
         Vector3 movement = new Vector3(moveInput.x, 0.0f, moveInput.y);
-        //characterController.SimpleMove(movement * moveSpeed);
 
         rb.AddForce(moveDirection * moveSpeed, ForceMode.Acceleration);
+
+        // Rotate the character to match the direction of travel
+        rb.MoveRotation(Quaternion.Lerp(transform.localRotation, Quaternion.LookRotation(moveDirection, Vector3.up), Time.deltaTime * rotationSpeed));
 
         if (movement == Vector3.zero && IsGrounded())
         {
