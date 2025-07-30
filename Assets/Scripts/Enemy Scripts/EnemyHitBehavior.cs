@@ -7,44 +7,63 @@ public class EnemyHitBehavior : MonoBehaviour
 {
     private float attackTimer = 0.0f;
 
-    public Transform enemy;
+    public GameObject enemyObject;
 
-    public Vector3 offset = new Vector3(0, 0, 1);
+    private bool canAttack = false;
+
+    public float bufferTime = 1f;
+
+    public float timeBetweenAttacks = 2f;
+
+    void Awake()
+    {
+        EnemyBrain.canAttack += StartAttack;
+        EnemyBrain.canNotAttack += StopAttack;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (attackTimer < 1)
+        if (attackTimer < timeBetweenAttacks)
         {
             attackTimer += Time.deltaTime;
 
-            Mathf.Clamp(attackTimer, 0, 1);
+            Mathf.Clamp(attackTimer, 0, timeBetweenAttacks);
 
-            // Sets attackTimer to 1 in case of overflow
-            if (attackTimer > 1)
-                attackTimer = 1;
+            // Sets attackTimer to "timeBetweenAttacks" in case of overflow
+            if (attackTimer > timeBetweenAttacks)
+            {
+                attackTimer = timeBetweenAttacks;
+            }
         }
 
-        transform.position = enemy.position + transform.forward + offset;
-        transform.rotation = enemy.rotation;
-    }
-
-    void OnAttack(InputValue attack)
-    {
-        if (attackTimer == 1)
+        if (attackTimer == timeBetweenAttacks)
         {
-            attackTimer = 0;
-            StartCoroutine(EnemyAttack1());
+            if (canAttack == true)
+            {
+                StartCoroutine(EnemyAttack1());
+            }
         }
-
     }
 
     IEnumerator EnemyAttack1()
     {
-        gameObject.GetComponent<BoxCollider>().enabled = true;
+        enemyObject.GetComponent<BoxCollider>().enabled = true;
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(bufferTime);
 
-        gameObject.GetComponent<BoxCollider>().enabled = false;
+        enemyObject.GetComponent<BoxCollider>().enabled = false;
+        attackTimer = 0;
     }
+
+    void StartAttack()
+    { 
+        canAttack = true;
+    }
+
+    void StopAttack()
+    { 
+        canAttack = false;
+    }
+
 }

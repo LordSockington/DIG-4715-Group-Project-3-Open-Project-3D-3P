@@ -7,16 +7,15 @@ public class PlayerController : MonoBehaviour
 {
     //private Vector2 lookInput;
     private Vector2 moveInput;
-    //private Rigidbody rb;
 
     public float jumpForce = 5;
     public float moveSpeed = 1;
     public float rotationSpeed = 0;
 
+    public int health = 20;
+
     // Time between each attack
     private float attackTimer = 0.0f;
-
-    //private CharacterController characterController;
 
     private Rigidbody rb;
     public float distToGround = 1f;
@@ -28,12 +27,6 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        //characterController = GetComponent<CharacterController>();
-    }
-
-    void Start()
-    {
-        
     }
 
     private void Update()
@@ -130,6 +123,15 @@ public class PlayerController : MonoBehaviour
             {
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             }
+        }
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "Attack")
+        {
+            health -= 1;
+            Debug.Log(health);
         }
     }
 }

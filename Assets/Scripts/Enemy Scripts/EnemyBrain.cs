@@ -6,9 +6,16 @@ public class EnemyBrain : MonoBehaviour
     private NavMeshAgent enemy;
 
     public float enemyHealth;
+    public float stopDistance;
 
     [SerializeField]
     private GameObject player;
+
+    public delegate void playerInRange();
+    public static event playerInRange canAttack;
+
+    public delegate void playerOutOfRange();
+    public static event playerOutOfRange canNotAttack;
 
     void Start()
     {
@@ -18,6 +25,9 @@ public class EnemyBrain : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player");
         }
+
+        enemy.stoppingDistance = stopDistance;
+
     }
 
     void Update()
@@ -28,8 +38,6 @@ public class EnemyBrain : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        Debug.Log(enemyHealth);
     }
 
     void OnTriggerEnter(Collider collider)
@@ -37,6 +45,19 @@ public class EnemyBrain : MonoBehaviour
         if (collider.gameObject.tag == "Attack")
         {
             enemyHealth -= 1;
+            Debug.Log(enemyHealth);
+        }
+        if (collider.gameObject.tag == "Player")
+        {
+            canAttack.Invoke();
+        }
+    }
+
+    void OnTriggerExit(Collider collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        { 
+            canNotAttack.Invoke();
         }
     }
 
