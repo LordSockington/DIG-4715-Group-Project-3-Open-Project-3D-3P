@@ -85,7 +85,6 @@ public class PlayerController : MonoBehaviour
     // Check for player contact with the ground to initiate a jump.
     private bool IsGrounded()
     {
-        Debug.Log("Checking if grounded");
         return Physics.Raycast(transform.position, Vector3.down, distToGround, LayerMask.GetMask("Ground"));
     }
 
@@ -129,7 +128,6 @@ public class PlayerController : MonoBehaviour
         {
             if (IsGrounded())
             {
-                Debug.Log("Jumping");
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             }
         }
