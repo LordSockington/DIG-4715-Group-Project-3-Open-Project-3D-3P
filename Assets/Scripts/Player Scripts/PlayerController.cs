@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     //private CharacterController characterController;
 
     private Rigidbody rb;
-    public float distToGround;
+    public float distToGround = 1f;
     public Camera playerCam;
 
     private Vector3 vertical;
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-
+        
     }
 
     private void Update()
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
     private bool IsGrounded()
     {
         Debug.Log("Checking if grounded");
-        return Physics.Raycast(transform.position, Vector3.down, distToGround + 0.1f);
+        return Physics.Raycast(transform.position, Vector3.down, distToGround, LayerMask.GetMask("Ground"));
     }
 
     // Adjusts rotation of player character
@@ -133,8 +133,5 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             }
         }
-
     }
-
-
 }

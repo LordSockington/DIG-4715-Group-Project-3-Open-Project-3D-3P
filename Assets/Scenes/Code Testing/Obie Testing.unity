@@ -132,9 +132,9 @@ GameObject:
   - component: {fileID: 111600860}
   - component: {fileID: 111600859}
   - component: {fileID: 111600863}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -400,7 +400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &359501868
 AudioListener:
   m_ObjectHideFlags: 0
@@ -614,10 +614,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4484104074102496238, guid: 10f2a25476ed75a4b9a13afde4ed12e3, type: 3}
-      propertyPath: playerCam
-      value: 
-      objectReference: {fileID: 359501869}
     - target: {fileID: 5693957401639249511, guid: 10f2a25476ed75a4b9a13afde4ed12e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -656,18 +652,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5693957401639249511, guid: 10f2a25476ed75a4b9a13afde4ed12e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7047831437027902671, guid: 10f2a25476ed75a4b9a13afde4ed12e3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8688108789889529587, guid: 10f2a25476ed75a4b9a13afde4ed12e3, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8710230134956786327, guid: 10f2a25476ed75a4b9a13afde4ed12e3, type: 3}
-      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

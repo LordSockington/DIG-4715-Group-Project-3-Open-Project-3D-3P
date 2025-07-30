@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 3117124193570349700}
   - component: {fileID: 1141652480288940200}
   - component: {fileID: 4484104074102496238}
-  - component: {fileID: 8688108789889529587}
   - component: {fileID: 1689718011538332342}
   m_Layer: 0
   m_Name: Player
@@ -102,7 +101,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313702269750367309}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -119,7 +118,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!136 &3117124193570349700
 CapsuleCollider:
@@ -186,36 +185,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97e013db7ec8414f90ecf1a0e7a389e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
+  jumpForce: 25
   moveSpeed: 5
   rotationSpeed: 0
-  distToGround: 0
-  playerCam: {fileID: 0}
---- !u!143 &8688108789889529587
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 313702269750367309}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  distToGround: 1
+  playerCam: {fileID: 8174909312882489640}
 --- !u!195 &1689718011538332342
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -223,7 +197,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313702269750367309}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
