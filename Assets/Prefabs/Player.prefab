@@ -188,6 +188,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 5
   moveSpeed: 5
+  rotationSpeed: 0
+  distToGround: 0
+  playerCam: {fileID: 0}
 --- !u!143 &8688108789889529587
 CharacterController:
   m_ObjectHideFlags: 0
