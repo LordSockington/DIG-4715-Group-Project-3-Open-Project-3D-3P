@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a6b307f232ca1224a9cc94664dcb5739
+guid: 174324fa3fb672f4ba678d5691116137
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -17,8 +17,8 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Idle pose_FBX' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
       to improve retargeting quality.\n\t'Christian_Ab' has translation animation
       that will be discarded.\n\t'Christian_Chest' has translation animation that
       will be discarded.\n\t'Christian_Neck' has translation animation that will
@@ -831,11 +831,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: a6b307f232ca1224a9cc94664dcb5739, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
