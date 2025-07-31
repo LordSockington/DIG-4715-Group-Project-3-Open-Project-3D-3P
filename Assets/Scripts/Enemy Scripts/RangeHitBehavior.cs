@@ -3,18 +3,19 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class EnemyHitBehavior : MonoBehaviour
+public class RangeHitBehavior : MonoBehaviour
 {
-    /* 
     private float attackTimer = 0.0f;
-    public float bufferTime = 1f;
-    public float timeBetweenAttacks = 2f;
 
     public GameObject enemyObject;
 
     private bool canAttack = false;
 
-    void Start()
+    public float bufferTime = 1f;
+
+    public float timeBetweenAttacks = 2f;
+
+    void Awake()
     {
         
     }
@@ -53,8 +54,5 @@ public class EnemyHitBehavior : MonoBehaviour
         enemyObject.GetComponent<BoxCollider>().enabled = false;
         attackTimer = 0;
     }
-    */
-
-    //Has been merged with EnemyBrain
 
 }

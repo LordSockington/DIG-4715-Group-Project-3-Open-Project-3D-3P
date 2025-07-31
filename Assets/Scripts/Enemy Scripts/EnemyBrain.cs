@@ -1,21 +1,31 @@
+using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.AI;
+using UnityEngine.InputSystem;
 
 public class EnemyBrain : MonoBehaviour
 {
-    private NavMeshAgent enemy;
+    private UnityEngine.AI.NavMeshAgent enemy;
 
     public float enemyHealth;
-    public float stopDistance;
+    public float stopDistance = 2f;
+    public float rangedStopDistance = 10f;
 
     [SerializeField]
     private GameObject player;
 
-    public delegate void playerInRange();
-    public static event playerInRange canAttack;
+    private float attackTimer = 0.0f;
+    public float bufferTime = 1f;
+    public float timeBetweenAttacks = 2f;
 
-    public delegate void playerOutOfRange();
-    public static event playerOutOfRange canNotAttack;
+    public GameObject enemyObject;
+    public GameObject bullet;
+
+    public Transform bulletSpawn;
+
+    public bool canAttack = false;
+
+    public bool isRanged = false;
 
     void Start()
     {
@@ -26,7 +36,14 @@ public class EnemyBrain : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player");
         }
 
-        enemy.stoppingDistance = stopDistance;
+        if (isRanged == true)
+        {
+            enemy.stoppingDistance = rangedStopDistance;
+        }
+        else
+        {
+            enemy.stoppingDistance = stopDistance;
+        }
 
     }
 
@@ -38,9 +55,31 @@ public class EnemyBrain : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (attackTimer < timeBetweenAttacks)
+        {
+            attackTimer += Time.deltaTime;
+
+            Mathf.Clamp(attackTimer, 0, timeBetweenAttacks);
+
+            // Sets attackTimer to "timeBetweenAttacks" in case of overflow
+            if (attackTimer > timeBetweenAttacks)
+            {
+                attackTimer = timeBetweenAttacks;
+            }
+        }
+
+        if (attackTimer == timeBetweenAttacks)
+        {
+            if (canAttack == true && isRanged == false)
+            {
+                StartCoroutine(EnemyAttack1());
+            }
+        }
+
     }
 
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerEnter (Collider collider)
     {
         if (collider.gameObject.tag == "Attack")
         {
@@ -49,17 +88,45 @@ public class EnemyBrain : MonoBehaviour
         }
         if (collider.gameObject.tag == "Player")
         {
-            canAttack.Invoke();
+            canAttack = true;
         }
     }
 
-    void OnTriggerExit(Collider collider)
+    void OnTriggerStay(Collider collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            if (isRanged == true)
+            {
+                if (attackTimer == timeBetweenAttacks)
+                {
+                    if (canAttack == true)
+                    {
+                        attackTimer = 0;
+                        Debug.Log("Shot");
+                        Instantiate(bullet, bulletSpawn.transform);
+                    }
+                }
+            }
+        }
+    }
+
+    void OnTriggerExit (Collider collider)
     {
         if (collider.gameObject.tag == "Player")
         { 
-            canNotAttack.Invoke();
+            canAttack = false;
         }
     }
 
+    IEnumerator EnemyAttack1()
+    {
+        enemyObject.GetComponent<BoxCollider>().enabled = true;
+
+        yield return new WaitForSeconds(bufferTime);
+
+        enemyObject.GetComponent<BoxCollider>().enabled = false;
+        attackTimer = 0;
+    }
 
 }
