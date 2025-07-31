@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2740224530741031497}
   m_Layer: 0
   m_Name: Enemy1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,11 +105,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 5
   stopDistance: 2
+  rangedStopDistance: 10
   player: {fileID: 0}
   bufferTime: 1
   timeBetweenAttacks: 2
   enemyObject: {fileID: 2133390301079503849}
+  bullet: {fileID: 0}
+  bulletSpawn: {fileID: 0}
   canAttack: 0
+  isRanged: 0
 --- !u!195 &7603203462434103915
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -147,11 +151,11 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.5
+  m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &6289266656021443395
 Rigidbody:
@@ -199,5 +203,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 0.75}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 1, y: 1, z: 1.5471997}
+  m_Center: {x: 0, y: 0, z: 1.3985999}

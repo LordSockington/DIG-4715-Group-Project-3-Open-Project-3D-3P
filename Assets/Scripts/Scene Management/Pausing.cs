@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class Pausing : MonoBehaviour
 {
@@ -7,25 +8,23 @@ public class Pausing : MonoBehaviour
 
     public static bool isPaused = false;
 
+    /* 
     public delegate void Paused();
     public static event Paused currentlyPaused; // These 2 events are so the camera doesn't move while pause, need to add that I believe
 
     public delegate void isntPaused();
-    public static event isntPaused notPaused;
+    public static event isntPaused notPaused; 
+    */
 
-
-    void Update()
+    void OnPause(InputValue pause)
     {
-        if (Input.GetButtonDown("Pause"))
+        if (isPaused == true)
         {
-            if (isPaused == true)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
+            Resume();
+        }
+        else
+        {
+            Pause();
         }
     }
 
@@ -36,7 +35,7 @@ public class Pausing : MonoBehaviour
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        notPaused.Invoke();
+        //notPaused.Invoke();
     }
 
     void Pause()
@@ -46,13 +45,13 @@ public class Pausing : MonoBehaviour
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        currentlyPaused.Invoke();
+        //currentlyPaused.Invoke();
     }
 
     public void ReturnToMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame()

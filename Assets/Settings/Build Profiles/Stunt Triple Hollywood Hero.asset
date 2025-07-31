@@ -28,6 +28,12 @@ MonoBehaviour:
     m_path: Assets/Scenes/Test Scenes/LevelSentai.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Test Scenes/LevelNoir.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/MainMenu.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/LevelTesting/Noir.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/LevelTesting/Western.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings: []
