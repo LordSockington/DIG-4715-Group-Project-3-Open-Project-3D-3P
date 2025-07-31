@@ -628,7 +628,7 @@ GameObject:
   - component: {fileID: 934105648}
   - component: {fileID: 934105647}
   - component: {fileID: 934105646}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -788,7 +788,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2133390301079503849, guid: d9d469cc0099baf4f8afc13dbd08b86c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1610527480}
+    - targetCorrespondingSourceObject: {fileID: 2133390301079503849, guid: d9d469cc0099baf4f8afc13dbd08b86c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1610527479}
   m_SourcePrefab: {fileID: 100100000, guid: d9d469cc0099baf4f8afc13dbd08b86c, type: 3}
 --- !u!1 &1363334078 stripped
 GameObject:
@@ -800,6 +806,47 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5172446343622456124, guid: 53344da8d152f99428dc8c1fe83c9c76, type: 3}
   m_PrefabInstance: {fileID: 3965405417880904267}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1610527478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2133390301079503849, guid: d9d469cc0099baf4f8afc13dbd08b86c, type: 3}
+  m_PrefabInstance: {fileID: 1200187675}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1610527479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610527478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8ba9b109d34b64ab2cf4ed962b1b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyObject: {fileID: 1610527478}
+  bufferTime: 1
+  timeBetweenAttacks: 2
+--- !u!65 &1610527480
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610527478}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2134141121
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,9 +964,21 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8753124849276672575, guid: 53344da8d152f99428dc8c1fe83c9c76, type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753124849276672575, guid: 53344da8d152f99428dc8c1fe83c9c76, type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753124849276672575, guid: 53344da8d152f99428dc8c1fe83c9c76, type: 3}
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 76497819}
+    - target: {fileID: 8753124849276672575, guid: 53344da8d152f99428dc8c1fe83c9c76, type: 3}
+      propertyPath: distToGround
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
