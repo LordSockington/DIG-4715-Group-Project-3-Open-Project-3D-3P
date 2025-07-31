@@ -6,7 +6,7 @@ public class LevelSwitching : MonoBehaviour
     public void ReturnToMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MainMenu");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }

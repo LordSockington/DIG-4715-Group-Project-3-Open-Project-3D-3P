@@ -51,7 +51,7 @@ public class Pausing : MonoBehaviour
     public void ReturnToMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame()

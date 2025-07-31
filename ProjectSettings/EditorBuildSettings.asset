@@ -5,21 +5,39 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: a792b7e21ad15f24ca2ec9a7c3a27c27
   - enabled: 0
     path: Assets/Scenes/Test Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test Scenes/MainHub.unity
     guid: 6ddbb0c45ae108144b00124af234b1b2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test Scenes/LevelWestern.unity
     guid: 3b0608c61c90c574fab76beac85fbe23
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test Scenes/LevelSentai.unity
     guid: 0988334efbec66d4eb4875a1faf0d712
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test Scenes/LevelNoir.unity
     guid: 8ddd4ea123e5e72419a26365b4290aea
+  - enabled: 1
+    path: Assets/Scenes/LevelTesting/Western.unity
+    guid: bb714a9fa3a5a6c46b0d4ec40d4adfd3
+  - enabled: 1
+    path: Assets/Scenes/LevelTesting/Noir.unity
+    guid: 0b4eaa1a75f0e4144ac37a28d986cc2a
+  - enabled: 1
+    path: Assets/Scenes/LevelTesting/Kaiju.unity
+    guid: 1548ad21dbd2ea249ac1f6ad704996e3
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 0f8c59985bb74bf42b0dac1bfdfe2261
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
+    guid: ffa9520d99b51e84cb2ac92ec756cf2e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 8e042777af06be4498adc4d5855804bd, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

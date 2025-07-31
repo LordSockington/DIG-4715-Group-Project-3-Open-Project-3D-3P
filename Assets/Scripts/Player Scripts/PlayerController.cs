@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     public float jumpForce = 5;
     public float moveSpeed = 1;
+    public float maxSpeed = 1;
     public float rotationSpeed = 0;
 
     public int health = 20;
@@ -66,7 +67,10 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsMoving", false);
         }
 
-        verticalVelocity = rb.linearVelocity.y;
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void LateUpdate()
@@ -94,7 +98,7 @@ public class PlayerController : MonoBehaviour
     // Check for player contact with the ground to initiate a jump.
     private bool IsGrounded()
     {
-        return Physics.Raycast(transform.position, Vector3.down, distToGround, LayerMask.GetMask("Ground"));
+        return Physics.Raycast(transform.position, Vector3.down, distToGround);
     }
 
     // Adjusts rotation of player character
@@ -111,9 +115,17 @@ public class PlayerController : MonoBehaviour
 
         rb.AddForce(moveDirection * moveSpeed, ForceMode.Acceleration);
 
+        Vector3 currentVelocity = rb.linearVelocity;
+        Vector3 xzVelocity = new Vector3(currentVelocity.x, 0f, currentVelocity.z);
+        Vector3 yVelocity = new Vector3(0f, currentVelocity.y, 0f);
+
+        xzVelocity = Vector3.ClampMagnitude(xzVelocity, maxSpeed);
+
+        rb.linearVelocity = xzVelocity + yVelocity;
+
         // Rotate the character to match the direction of travel
 
-        if(moveDirection != Vector3.zero)
+        if (moveDirection != Vector3.zero)
         {
             rb.MoveRotation(Quaternion.Lerp(transform.localRotation, Quaternion.LookRotation(moveDirection, Vector3.up), Time.deltaTime * rotationSpeed));
         }
@@ -151,7 +163,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "Attack")
+        if (collider.gameObject.tag == "Enemy")
         {
             health -= 1;
             Debug.Log(health);
