@@ -1,0 +1,845 @@
+fileFormatVersion: 2
+guid: 174324fa3fb672f4ba678d5691116137
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Christian_Ab' has translation animation
+      that will be discarded.\n\t'Christian_Chest' has translation animation that
+      will be discarded.\n\t'Christian_Neck' has translation animation that will
+      be discarded.\n\t'Christian_Head' has translation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Christian_Christian
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LThigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RThigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LShin
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RShin
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_Ab
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_Chest
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LUArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RUArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LFArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RFArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LToe
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RToe
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LThumb3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LMiddle3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LRing3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_LPinky3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RThumb3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RMiddle3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RRing3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Christian_RPinky3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Idle pose(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_Christian
+      parentName: Idle pose(Clone)
+      position: {x: 0, y: 0.8801222, z: 0}
+      rotation: {x: -0.0039032353, y: -0.029461563, z: -0.0055930926, w: 0.99954265}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_Ab
+      parentName: Christian_Christian
+      position: {x: -0.000000005355105, y: 0.07601646, z: -0.00000005448237}
+      rotation: {x: 0.0063035483, y: -0.0016999397, z: 0.0021103797, w: 0.99997646}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_Chest
+      parentName: Christian_Ab
+      position: {x: 0.0000000015133992, y: 0.21248136, z: -0.000000007450581}
+      rotation: {x: -0.047409717, y: -0.0016275916, z: 0.0012834624, w: 0.9988734}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LShoulder
+      parentName: Christian_Chest
+      position: {x: -0.036358457, y: 0.18342504, z: -0.0010081846}
+      rotation: {x: 0.0065415273, y: -0.10070525, z: -0.0644896, w: 0.9928025}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LUArm
+      parentName: Christian_LShoulder
+      position: {x: -0.1052835, y: -0.00000002142042, z: -0.00000004656613}
+      rotation: {x: -0.11896562, y: 0.118430205, z: 0.10264332, w: 0.9804519}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LFArm
+      parentName: Christian_LUArm
+      position: {x: -0.306372, y: -0.000000013038516, z: 0.000000016763806}
+      rotation: {x: 0.17707667, y: 0.009329911, z: -0.02416135, w: 0.9838562}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LHand
+      parentName: Christian_LFArm
+      position: {x: -0.21249771, y: 0.00000002514571, z: -0.000000022351742}
+      rotation: {x: -0.18437314, y: -0.16806853, z: -0.07176081, w: 0.9657173}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LIndex1
+      parentName: Christian_LHand
+      position: {x: -0.09744979, y: 0.000000014901161, z: 0.037897103}
+      rotation: {x: -0.059517592, y: 0.06984465, z: 0.05998326, w: 0.99397254}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LIndex2
+      parentName: Christian_LIndex1
+      position: {x: -0.04321441, y: -0.000000055879354, z: -0.000000024214387}
+      rotation: {x: 0.00000009685751, y: 0.0000009685751, z: 0.03350411, w: 0.9994386}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LIndex3
+      parentName: Christian_LIndex2
+      position: {x: -0.021607224, y: -0.00000006891787, z: 0.000000013969839}
+      rotation: {x: -0.000000058246002, y: -0.0000022157747, z: 0.033511974, w: 0.99943835}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LIndex3End
+      parentName: Christian_LIndex3
+      position: {x: -0.019657733, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LMiddle1
+      parentName: Christian_LHand
+      position: {x: -0.097449824, y: -0.000000040978193, z: 0.012560222}
+      rotation: {x: 0.017155483, y: 0.0567253, z: 0.052877188, w: 0.996841}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LMiddle2
+      parentName: Christian_LMiddle1
+      position: {x: -0.047535777, y: -0.000000014901161, z: 0.000000044703484}
+      rotation: {x: 0.0000001639127, y: -0.00000028312192, z: 0.033508707, w: 0.9994384}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LMiddle3
+      parentName: Christian_LMiddle2
+      position: {x: -0.025928566, y: -0.00000004656613, z: -0.00000004004687}
+      rotation: {x: 0.00000017601513, y: -0.000001484063, z: 0.03350698, w: 0.99943846}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LMiddle3End
+      parentName: Christian_LMiddle3
+      position: {x: -0.023589244, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LPinky1
+      parentName: Christian_LHand
+      position: {x: -0.086622015, y: 0.000000056810677, z: -0.03789712}
+      rotation: {x: -0.03531239, y: 0.05532886, z: 0.05353636, w: 0.9964064}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LPinky2
+      parentName: Christian_LPinky1
+      position: {x: -0.03457153, y: -0.000000070780516, z: -0.000000052154064}
+      rotation: {x: 0.00000017881389, y: -0.00000023469323, z: 0.033505958, w: 0.9994385}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LPinky3
+      parentName: Christian_LPinky2
+      position: {x: -0.017285815, y: 0.000000013038516, z: 0.000000011175871}
+      rotation: {x: 0.000000113206625, y: 0.0000022496781, z: 0.03350238, w: 0.9994387}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LPinky3End
+      parentName: Christian_LPinky3
+      position: {x: -0.015726222, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LRing1
+      parentName: Christian_LHand
+      position: {x: -0.092035875, y: -0.000000033527613, z: -0.012560203}
+      rotation: {x: -0.052245468, y: 0.057541087, z: 0.056551244, w: 0.99537003}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LRing2
+      parentName: Christian_LRing1
+      position: {x: -0.043214392, y: 0.000000037252903, z: -0.00000005029142}
+      rotation: {x: 0.00000023096791, y: 0.0000017955892, z: 0.033510685, w: 0.99943835}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LRing3
+      parentName: Christian_LRing2
+      position: {x: -0.021607168, y: 0.000000014901161, z: -0.000000007450581}
+      rotation: {x: 0.0000005280032, y: 0.0000003078752, z: 0.03350429, w: 0.9994386}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LRing3End
+      parentName: Christian_LRing3
+      position: {x: -0.019657733, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LThumb1
+      parentName: Christian_LHand
+      position: {x: -0.023821006, y: -0.027069394, z: 0.037897088}
+      rotation: {x: 0.29214078, y: 0.49507526, z: -0.08063801, w: 0.81428}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LThumb2
+      parentName: Christian_LThumb1
+      position: {x: -0.028718319, y: 0.000000026077032, z: -0.000000022351742}
+      rotation: {x: 0.050999634, y: -0.032709893, z: -0.0068961224, w: 0.998139}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LThumb3
+      parentName: Christian_LThumb2
+      position: {x: -0.024545733, y: 0, z: 0.000000031664968}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LThumb3End
+      parentName: Christian_LThumb3
+      position: {x: -0.022331204, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_Neck
+      parentName: Christian_Chest
+      position: {x: 0.000000020023435, y: 0.22871967, z: 0.00000006891787}
+      rotation: {x: -0.007839901, y: -0.004565313, z: -0.025120199, w: 0.99964327}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_Head
+      parentName: Christian_Neck
+      position: {x: -0.00000001071021, y: 0.140473, z: 0.01819557}
+      rotation: {x: 0.005153804, y: -0.0043178555, z: -0.010440151, w: 0.99992293}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_HeadEnd
+      parentName: Christian_Head
+      position: {x: -0, y: 0.1819554, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RShoulder
+      parentName: Christian_Chest
+      position: {x: 0.03635843, y: 0.18342504, z: -0.0010081612}
+      rotation: {x: 0.005339598, y: 0.08780892, z: 0.060461823, w: 0.9942864}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RUArm
+      parentName: Christian_RShoulder
+      position: {x: 0.10528348, y: -0.000000014901161, z: 0.000000039115548}
+      rotation: {x: -0.05319705, y: -0.10706406, z: -0.0950359, w: 0.98826903}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RFArm
+      parentName: Christian_RUArm
+      position: {x: 0.30637202, y: 0, z: -0.000000007450581}
+      rotation: {x: 0.10528889, y: -0.014394073, z: 0.014474604, w: 0.9942322}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RHand
+      parentName: Christian_RFArm
+      position: {x: 0.21249771, y: -0.000000026077032, z: -0.000000022351742}
+      rotation: {x: -0.16399378, y: 0.0963015, z: 0.06998271, w: 0.97925204}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RIndex1
+      parentName: Christian_RHand
+      position: {x: 0.097449794, y: 0.000000039115548, z: 0.03789712}
+      rotation: {x: 0.1598256, y: -0.09044162, z: 0.036099687, w: 0.9823304}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RIndex2
+      parentName: Christian_RIndex1
+      position: {x: 0.04321439, y: -0.000000022351742, z: 0.000000018626451}
+      rotation: {x: 0.00000020861619, y: -0.000002101063, z: -0.033505302, w: 0.9994386}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RIndex3
+      parentName: Christian_RIndex2
+      position: {x: 0.021607202, y: -0.000000033527613, z: 0.0000000144355}
+      rotation: {x: 0.00000005007522, y: 0.0000030797767, z: -0.033506118, w: 0.9994386}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RIndex3End
+      parentName: Christian_RIndex3
+      position: {x: 0.019657733, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RMiddle1
+      parentName: Christian_RHand
+      position: {x: 0.09744979, y: 0.0000000018626451, z: 0.0125601655}
+      rotation: {x: 0.07787815, y: 0.0056561725, z: 0.05057655, w: 0.9956631}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RMiddle2
+      parentName: Christian_RMiddle1
+      position: {x: 0.04753581, y: -0.00000004377216, z: -0.000000033993274}
+      rotation: {x: 0.00000012665983, y: -0.0000015813852, z: -0.033508487, w: 0.99943846}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RMiddle3
+      parentName: Christian_RMiddle2
+      position: {x: 0.025928637, y: 0.000000013504177, z: -0.000000003259629}
+      rotation: {x: 0.000000064051676, y: 0.0000027361725, z: -0.03350643, w: 0.9994385}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RMiddle3End
+      parentName: Christian_RMiddle3
+      position: {x: 0.023589244, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RPinky1
+      parentName: Christian_RHand
+      position: {x: 0.086622015, y: 0.0000000041909516, z: -0.037897155}
+      rotation: {x: -0.1609901, y: 0.012709663, z: 0.008792919, w: 0.98683506}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RPinky2
+      parentName: Christian_RPinky1
+      position: {x: 0.034571525, y: -0.000000040512532, z: 0.000000031664968}
+      rotation: {x: -0.0000005513427, y: 0.0000017350532, z: -0.03350353, w: 0.99943864}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RPinky3
+      parentName: Christian_RPinky2
+      position: {x: 0.017285757, y: -0.0000000013969839, z: 0.00000005029142}
+      rotation: {x: -0.00000030570763, y: 0.0000015057582, z: -0.03351263, w: 0.99943835}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RPinky3End
+      parentName: Christian_RPinky3
+      position: {x: 0.015726222, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RRing1
+      parentName: Christian_RHand
+      position: {x: 0.09203589, y: -0.0000000013969839, z: -0.012560207}
+      rotation: {x: -0.08020988, y: 0.010742177, z: 0.025339782, w: 0.99639803}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RRing2
+      parentName: Christian_RRing1
+      position: {x: 0.043214407, y: -0.000000019092113, z: 0.000000047148205}
+      rotation: {x: 0.00000014901154, y: -0.00000088848134, z: -0.033506703, w: 0.9994386}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RRing3
+      parentName: Christian_RRing2
+      position: {x: 0.021607177, y: 0.00000003259629, z: -2.3283064e-10}
+      rotation: {x: -0.00000009809267, y: 0.0000011504319, z: -0.03350861, w: 0.9994385}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RRing3End
+      parentName: Christian_RRing3
+      position: {x: 0.019657733, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RThumb1
+      parentName: Christian_RHand
+      position: {x: 0.023821056, y: -0.027069358, z: 0.03789711}
+      rotation: {x: 0.36782393, y: -0.3919483, z: 0.16888367, w: 0.8261722}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RThumb2
+      parentName: Christian_RThumb1
+      position: {x: 0.028718272, y: 0.000000018626451, z: -0.000000031664968}
+      rotation: {x: -0.0568091, y: 0.0077838264, z: -0.017197631, w: 0.99820656}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RThumb3
+      parentName: Christian_RThumb2
+      position: {x: 0.024545783, y: 0.000000027241185, z: 0.000000041211024}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RThumb3End
+      parentName: Christian_RThumb3
+      position: {x: 0.022331204, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LThigh
+      parentName: Christian_Christian
+      position: {x: -0.090977676, y: -0.000000012572855, z: 0.000000057742}
+      rotation: {x: -0.007943911, y: 0.0034142993, z: 0.008833912, w: 0.9999236}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LShin
+      parentName: Christian_LThigh
+      position: {x: 0.000000002561137, y: -0.43410575, z: 0.000000058673322}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LFoot
+      parentName: Christian_LShin
+      position: {x: -0.0000000041909516, y: -0.3524116, z: 0.000000022351742}
+      rotation: {x: -0.08997093, y: -0.11583942, z: 0.0053986884, w: 0.98917}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LToe
+      parentName: Christian_LFoot
+      position: {x: 0.0000000037252903, y: -0.059135497, z: 0.13646649}
+      rotation: {x: -0.029009992, y: 0.000000022992024, z: 1.0504685e-18, w: 0.99957913}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_LToeEnd
+      parentName: Christian_LToe
+      position: {x: -0, y: 0, z: 0.03639108}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RThigh
+      parentName: Christian_Christian
+      position: {x: 0.090977676, y: 0.000000012572855, z: -0.000000057742}
+      rotation: {x: -0.026440741, y: -0.0036677995, z: -0.010581297, w: 0.99958766}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RShin
+      parentName: Christian_RThigh
+      position: {x: 0.000000011175871, y: -0.43410572, z: -0.0000000018626451}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RFoot
+      parentName: Christian_RShin
+      position: {x: 0.000000015366822, y: -0.35241157, z: 0.000000037252903}
+      rotation: {x: -0.112942845, y: 0.18235415, z: -0.010598171, w: 0.9766671}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RToe
+      parentName: Christian_RFoot
+      position: {x: 0.000000011175871, y: -0.059135493, z: 0.1364665}
+      rotation: {x: 0.003135029, y: 0.000000023064784, z: -9.957911e-19, w: 0.9999951}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Christian_RToeEnd
+      parentName: Christian_RToe
+      position: {x: -0, y: 0, z: 0.03639108}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: a6b307f232ca1224a9cc94664dcb5739, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

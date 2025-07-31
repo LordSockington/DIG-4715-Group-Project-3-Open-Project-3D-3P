@@ -13,7 +13,7 @@ public class ToHub : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("MainHub");
+                SceneManager.LoadScene("MainMenu");
                 Debug.Log("In the Hub!");
             }
         }
