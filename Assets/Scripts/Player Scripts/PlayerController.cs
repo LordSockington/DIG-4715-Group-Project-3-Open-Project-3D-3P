@@ -7,33 +7,31 @@ public class PlayerController : MonoBehaviour
 {
     //private Vector2 lookInput;
     private Vector2 moveInput;
-    //private Rigidbody rb;
 
     public float jumpForce = 5;
     public float moveSpeed = 1;
     public float rotationSpeed = 0;
 
+    public int health = 20;
+
     // Time between each attack
     private float attackTimer = 0.0f;
 
-    //private CharacterController characterController;
-
     private Rigidbody rb;
-    public float distToGround;
+    public float distToGround = 1f;
     public Camera playerCam;
 
     private Vector3 vertical;
     private Vector3 horizontal;
 
+    private Animator animator;
+
+    private float verticalVelocity;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        //characterController = GetComponent<CharacterController>();
-    }
-
-    void Start()
-    {
-
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -58,6 +56,17 @@ public class PlayerController : MonoBehaviour
 
         vertical.Normalize();
         horizontal.Normalize();
+
+        if (rb.linearVelocity != Vector3.zero)
+        {
+            animator.SetBool("IsMoving", true);
+        }
+        else
+        {
+            animator.SetBool("IsMoving", false);
+        }
+
+        verticalVelocity = rb.linearVelocity.y;
     }
 
     void LateUpdate()
@@ -85,7 +94,7 @@ public class PlayerController : MonoBehaviour
     // Check for player contact with the ground to initiate a jump.
     private bool IsGrounded()
     {
-        return Physics.Raycast(transform.position, Vector3.down, distToGround + 0.1f);
+        return Physics.Raycast(transform.position, Vector3.down, distToGround, LayerMask.GetMask("Ground"));
     }
 
     // Adjusts rotation of player character
@@ -103,22 +112,29 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(moveDirection * moveSpeed, ForceMode.Acceleration);
 
         // Rotate the character to match the direction of travel
-        rb.MoveRotation(Quaternion.Lerp(transform.localRotation, Quaternion.LookRotation(moveDirection, Vector3.up), Time.deltaTime * rotationSpeed));
+
+        if(moveDirection != Vector3.zero)
+        {
+            rb.MoveRotation(Quaternion.Lerp(transform.localRotation, Quaternion.LookRotation(moveDirection, Vector3.up), Time.deltaTime * rotationSpeed));
+        }
 
         if (movement == Vector3.zero && IsGrounded())
         {
-            rb.AddForce(-rb.linearVelocity, ForceMode.Acceleration);
+            rb.linearVelocity = new Vector3(0, verticalVelocity, 0);
         }
     }
 
     // Functionality for first player attack.
     IEnumerator PlayerAttack1()
     {
+
+        animator.SetBool("IsAttacking", true);
         //transform.GetChild(0).gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.5f);
 
         //transform.GetChild(0).gameObject.SetActive(false);
+        animator.SetBool("IsAttacking", false);
     }
 
    //Allows the character to jump, both pc and xbox support
@@ -126,11 +142,19 @@ public class PlayerController : MonoBehaviour
     {
         if (jump.isPressed)
         {
-            if(IsGrounded())
+            if (IsGrounded())
+            {
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            }
         }
-
     }
 
-
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "Attack")
+        {
+            health -= 1;
+            Debug.Log(health);
+        }
+    }
 }
