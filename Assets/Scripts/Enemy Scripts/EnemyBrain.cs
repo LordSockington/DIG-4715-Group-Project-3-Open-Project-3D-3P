@@ -7,7 +7,7 @@ public class EnemyBrain : MonoBehaviour
 {
     private UnityEngine.AI.NavMeshAgent enemy;
 
-    public int coinChance = 20;
+    public int coinChance = 5;
 
     public float enemyHealth;
     public float stopDistance = 2f;
@@ -35,7 +35,7 @@ public class EnemyBrain : MonoBehaviour
 
     void Awake()
     {
-        coinChance = Random.Range(1, coinChance);
+        coinChance = Random.Range(1, coinChance+1);
         Debug.Log("CoinChance is 1/" + coinChance);
     }
 
@@ -144,9 +144,9 @@ public class EnemyBrain : MonoBehaviour
 
     void OnDestroy()
     {
-        if (playerKilled == true && coinChance == 0)
+        if (playerKilled == true)
         {
-            CoinCounting.Invoke();
+            GameManagment.CoinCounter(coinChance);
         }
         
     }
