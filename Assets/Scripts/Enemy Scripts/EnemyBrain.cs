@@ -7,6 +7,7 @@ public class EnemyBrain : MonoBehaviour
 {
     private UnityEngine.AI.NavMeshAgent enemy;
 
+    public Animator animator;
     public int coinChance = 5;
 
     public float enemyHealth;
@@ -129,11 +130,13 @@ public class EnemyBrain : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         { 
             canAttack = false;
+            animator.SetBool("Attacking", false);
         }
     }
 
     IEnumerator EnemyAttack1()
     {
+        animator.SetBool("Attacking", true);
         enemyObject.GetComponent<BoxCollider>().enabled = true;
 
         yield return new WaitForSeconds(bufferTime);
