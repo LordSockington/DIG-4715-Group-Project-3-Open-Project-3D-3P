@@ -6699,7 +6699,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278561038}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &278561042
 Camera:
   m_ObjectHideFlags: 0
@@ -12351,7 +12351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35c7dac91902a824f874d73e6808ea02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1132923113}
+  pauseMenu: {fileID: 747233971}
 --- !u!4 &529712180
 Transform:
   m_ObjectHideFlags: 0
@@ -37501,28 +37501,39 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenuCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 3230311271260328190, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
-      propertyPath: pauseMenu
-      value: 
-      objectReference: {fileID: 747233971}
-    - target: {fileID: 3230311271260328190, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
-      propertyPath: howToPlayScreen
-      value: 
-      objectReference: {fileID: 1615094178}
-    - target: {fileID: 7740481092169186709, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 3336965098214508669, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336965098214508669, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718049383243249780, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718049383243249780, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718049383243249780, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718049383243249780, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -622
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718049383243249780, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -411
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
---- !u!1 &1615094178 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4557513193827079368, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
-  m_PrefabInstance: {fileID: 1615094177}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1622808424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48409,6 +48420,10 @@ PrefabInstance:
       value: Player 1
       objectReference: {fileID: 0}
     - target: {fileID: 8753124849276672575, guid: 53344da8d152f99428dc8c1fe83c9c76, type: 3}
+      propertyPath: hpBar
+      value: 
+      objectReference: {fileID: 2145469784}
+    - target: {fileID: 8753124849276672575, guid: 53344da8d152f99428dc8c1fe83c9c76, type: 3}
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 278561042}
@@ -51720,6 +51735,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140830758}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2145469784 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1798788468409633953, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+  m_PrefabInstance: {fileID: 1615094177}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

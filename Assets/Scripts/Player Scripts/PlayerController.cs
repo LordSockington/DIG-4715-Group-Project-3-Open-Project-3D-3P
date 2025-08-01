@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -29,6 +30,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
 
     private float verticalVelocity;
+
+    public Slider hpBar;
 
     void Awake()
     {
