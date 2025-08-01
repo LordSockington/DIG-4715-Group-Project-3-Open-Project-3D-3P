@@ -6,7 +6,7 @@ public class GameManagment : MonoBehaviour
     //Names game manager
     public static GameManagment manager;
 
-    public static bool westernHat, sentaiHat, noirHat, speedBuff, healthBuff, attackBuff;
+    public static bool westernHat, sentaiHat, noirHat, speedBuff, healthBuff, attackBuff, lowPolyWestern, lowPolyNoir, lowPolySentai;
 
     public static int coins = 0;
     public static int attackBoost = 0;
@@ -34,6 +34,9 @@ public class GameManagment : MonoBehaviour
         Shop.SpeedUp += SpeedBuff;
         Shop.HealthUp += HealthBuff;
         Shop.AttackUp += AttackBuff;
+        HiddenWestern.WesternPosterGot += PolyWestern;
+        HiddenNoir.NoirPosterGot += PolyNoir;
+        HiddenSentai.SentaiPosterGot += PolySentai;
     }
 
     void LevelWesternDone()
@@ -80,4 +83,20 @@ public class GameManagment : MonoBehaviour
         attackBuff = true;
         attackBoost = 1;
     }
+
+    void PolyWestern()
+    {
+        lowPolyWestern = true;
+    }
+
+    void PolyNoir()
+    {
+        lowPolyNoir = true;
+    }
+
+    void PolySentai()
+    {
+        lowPolySentai = true;
+    }
+
 }

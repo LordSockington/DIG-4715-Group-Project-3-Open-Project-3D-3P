@@ -903,6 +903,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e118854dfc366849a75bbe5f330b46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  coinChance: 5
   enemyHealth: 5
   stopDistance: 2
   rangedStopDistance: 10
