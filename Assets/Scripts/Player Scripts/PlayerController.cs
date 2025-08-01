@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 0;
 
     public int health = 20;
+    public int maxHealth = 20;
 
     // Time between each attack
     private float attackTimer = 0.0f;
@@ -30,10 +33,23 @@ public class PlayerController : MonoBehaviour
     private float verticalVelocity;
     private bool hasJumped = false;
 
+    public Slider hpBar;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+    }
+
+    void Start()
+    {
+        maxHealth += GameManagment.healthBoost;
+        health = maxHealth;
+        hpBar.maxValue = maxHealth;
+        hpBar.value = health;
+        Debug.Log("Attack bonus is " + GameManagment.attackBoost);
+        moveSpeed += GameManagment.speedBoost;
+        
     }
 
     private void Update()
@@ -70,7 +86,7 @@ public class PlayerController : MonoBehaviour
 
         if(health <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("LoseScreen");
         }
 
         if (IsGrounded() && rb.linearVelocity.y < 0)
@@ -180,7 +196,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collider.gameObject.tag == "Enemy")
         {
-            health -= 1;
+            health -= 1 + GameManagment.attackBoost;
             Debug.Log(health);
         }
     }

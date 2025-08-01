@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Finished Scenes/MainMenu.unity
     guid: a792b7e21ad15f24ca2ec9a7c3a27c27
   - enabled: 0
     path: Assets/Scenes/Test Scenes/SampleScene.unity
@@ -33,10 +33,10 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelTesting/Kaiju.unity
     guid: 1548ad21dbd2ea249ac1f6ad704996e3
   - enabled: 1
-    path: Assets/Scenes/WinScreen.unity
+    path: Assets/Scenes/Finished Scenes/WinScreen.unity
     guid: 0f8c59985bb74bf42b0dac1bfdfe2261
   - enabled: 1
-    path: Assets/Scenes/LoseScreen.unity
+    path: Assets/Scenes/Finished Scenes/LoseScreen.unity
     guid: ffa9520d99b51e84cb2ac92ec756cf2e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 8e042777af06be4498adc4d5855804bd, type: 2}
