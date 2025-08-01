@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
 
     private float verticalVelocity;
+    private bool hasJumped = false;
 
     void Awake()
     {
@@ -70,6 +71,11 @@ public class PlayerController : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
+        }
+
+        if (IsGrounded() && rb.linearVelocity.y < 0)
+        {
+            hasJumped = false;
         }
     }
 
@@ -121,6 +127,14 @@ public class PlayerController : MonoBehaviour
 
         xzVelocity = Vector3.ClampMagnitude(xzVelocity, maxSpeed);
 
+        Debug.Log(hasJumped);
+        Debug.Log(currentVelocity.y);
+
+        if(hasJumped && currentVelocity.y < 0)
+        {
+            yVelocity *= 1.01f;
+        }
+
         rb.linearVelocity = xzVelocity + yVelocity;
 
         // Rotate the character to match the direction of travel
@@ -154,6 +168,7 @@ public class PlayerController : MonoBehaviour
     {
         if (jump.isPressed)
         {
+            hasJumped = true;
             if (IsGrounded())
             {
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
