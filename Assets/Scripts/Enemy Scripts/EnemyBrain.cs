@@ -7,6 +7,7 @@ public class EnemyBrain : MonoBehaviour
 {
     private UnityEngine.AI.NavMeshAgent enemy;
 
+    public Animator animator;
     public int coinChance = 5;
 
     public float enemyHealth;
@@ -30,13 +31,10 @@ public class EnemyBrain : MonoBehaviour
 
     public bool isRanged = false;
 
-    public delegate void coinDrop();
-    public static event coinDrop CoinCounting;
-
     void Awake()
     {
-        coinChance = Random.Range(1, coinChance+1);
-        Debug.Log("CoinChance is 1/" + coinChance);
+        coinChance = Random.Range(1, coinChance + 1);
+        //Debug.Log("CoinChance is 1/" + coinChance);
     }
 
     void Start()
@@ -61,9 +59,9 @@ public class EnemyBrain : MonoBehaviour
 
     void Update()
     {
-         enemy.SetDestination(player.transform.position);    //Uncomment if we want the enemies to always follow the player no matter where
+        enemy.SetDestination(player.transform.position);    //Uncomment if we want the enemies to always follow the player no matter where
 
-        if(enemyHealth <= 0)
+        if (enemyHealth <= 0)
         {
             playerKilled = true;
             Destroy(gameObject);
@@ -92,7 +90,7 @@ public class EnemyBrain : MonoBehaviour
 
     }
 
-    void OnTriggerEnter (Collider collider)
+    void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Attack")
         {
@@ -124,16 +122,18 @@ public class EnemyBrain : MonoBehaviour
         }
     }
 
-    void OnTriggerExit (Collider collider)
+    void OnTriggerExit(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
-        { 
+        {
             canAttack = false;
+            animator.SetBool("Attacking", false);
         }
     }
 
     IEnumerator EnemyAttack1()
     {
+        animator.SetBool("Attacking", true);
         enemyObject.GetComponent<BoxCollider>().enabled = true;
 
         yield return new WaitForSeconds(bufferTime);
@@ -148,6 +148,7 @@ public class EnemyBrain : MonoBehaviour
         {
             GameManagment.CoinCounter(coinChance);
         }
+
     }
 
 }
