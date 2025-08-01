@@ -28,7 +28,6 @@ public class GameManagment : MonoBehaviour
         WesternHat.WesternHatGot += LevelWesternDone;
         SentaiHat.SentaiHatGot += LevelSentaiDone;
         NoirHat.NoirHatGot += LevelNoirDone;
-        EnemyBrain.CoinCounting += CoinCounter;
     }
 
     void LevelWesternDone()
@@ -52,9 +51,9 @@ public class GameManagment : MonoBehaviour
         Cursor.visible = true;
     }
 
-    void CoinCounter()
-    { 
-        coins++;
+    public static void CoinCounter(int numCoins)
+    {
+        coins += numCoins;
         Debug.Log("Number of coin is: " + coins);
     }
 
