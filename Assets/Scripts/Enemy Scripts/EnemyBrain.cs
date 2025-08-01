@@ -7,6 +7,8 @@ public class EnemyBrain : MonoBehaviour
 {
     private UnityEngine.AI.NavMeshAgent enemy;
 
+    public int coinChance = 5;
+
     public float enemyHealth;
     public float stopDistance = 2f;
     public float rangedStopDistance = 10f;
@@ -24,8 +26,18 @@ public class EnemyBrain : MonoBehaviour
     public Transform bulletSpawn;
 
     public bool canAttack = false;
+    private bool playerKilled = false;
 
     public bool isRanged = false;
+
+    public delegate void coinDrop();
+    public static event coinDrop CoinCounting;
+
+    void Awake()
+    {
+        coinChance = Random.Range(1, coinChance+1);
+        Debug.Log("CoinChance is 1/" + coinChance);
+    }
 
     void Start()
     {
@@ -53,6 +65,7 @@ public class EnemyBrain : MonoBehaviour
 
         if(enemyHealth <= 0)
         {
+            playerKilled = true;
             Destroy(gameObject);
         }
 
@@ -84,7 +97,7 @@ public class EnemyBrain : MonoBehaviour
         if (collider.gameObject.tag == "Attack")
         {
             enemyHealth -= 1;
-            Debug.Log(enemyHealth);
+            //Debug.Log(enemyHealth);
         }
         if (collider.gameObject.tag == "Player")
         {
@@ -127,6 +140,14 @@ public class EnemyBrain : MonoBehaviour
 
         enemyObject.GetComponent<BoxCollider>().enabled = false;
         attackTimer = 0;
+    }
+
+    void OnDestroy()
+    {
+        if (playerKilled == true)
+        {
+            GameManagment.CoinCounter(coinChance);
+        }
     }
 
 }
