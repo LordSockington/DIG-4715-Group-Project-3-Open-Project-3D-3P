@@ -13,7 +13,7 @@ public class ToMainMenu : MonoBehaviour
 
     void StraightToDVD()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MainMenu");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
