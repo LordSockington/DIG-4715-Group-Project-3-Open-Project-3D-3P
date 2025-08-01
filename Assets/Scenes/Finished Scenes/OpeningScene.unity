@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: d2915dfbde8d50b47bd32a6290964134, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d8f4667c9cc564ba453479c37d75a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeTillMenu: 25
+  timeTillMenu: 23
 --- !u!1 &1477932870
 GameObject:
   m_ObjectHideFlags: 0

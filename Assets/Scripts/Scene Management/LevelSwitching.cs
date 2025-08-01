@@ -9,7 +9,7 @@ public class LevelSwitching : MonoBehaviour
     public void ReturnToMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("TitleScreen");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -18,6 +18,22 @@ public class LevelSwitching : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void LoadTrainingRoom()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Training Room");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void LoadShop()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Shop");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -58,6 +74,12 @@ public class LevelSwitching : MonoBehaviour
     { 
         pauseMenu.SetActive(false);
         howToPlayScreen.SetActive(true);
+    }
+
+    public void CloseHowToPlay()
+    {
+        pauseMenu.SetActive(false);
+        howToPlayScreen.SetActive(false);
     }
 
     public void BackToPause()

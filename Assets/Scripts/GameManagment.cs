@@ -6,9 +6,12 @@ public class GameManagment : MonoBehaviour
     //Names game manager
     public static GameManagment manager;
 
-    public static bool westernHat, sentaiHat, noirHat;
+    public static bool westernHat, sentaiHat, noirHat, speedBuff, healthBuff, attackBuff;
 
     public static int coins = 0;
+    public static int attackBoost = 0;
+    public static int healthBoost = 0;
+    public static float speedBoost = 0;
 
     void Awake()
     {
@@ -28,6 +31,9 @@ public class GameManagment : MonoBehaviour
         WesternHat.WesternHatGot += LevelWesternDone;
         SentaiHat.SentaiHatGot += LevelSentaiDone;
         NoirHat.NoirHatGot += LevelNoirDone;
+        Shop.SpeedUp += SpeedBuff;
+        Shop.HealthUp += HealthBuff;
+        Shop.AttackUp += AttackBuff;
     }
 
     void LevelWesternDone()
@@ -57,4 +63,21 @@ public class GameManagment : MonoBehaviour
         Debug.Log("Number of coin is: " + coins);
     }
 
+    void SpeedBuff()
+    { 
+        speedBuff = true;
+        speedBoost = 0.5f;
+    }
+
+    void HealthBuff()
+    {
+        healthBuff = true;
+        healthBoost = 10;
+    }
+
+    void AttackBuff()
+    {
+        attackBuff = true;
+        attackBoost = 1;
+    }
 }

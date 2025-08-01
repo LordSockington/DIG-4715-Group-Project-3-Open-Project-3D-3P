@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 0;
 
     public int health = 20;
+    public int maxHealth = 20;
 
     // Time between each attack
     private float attackTimer = 0.0f;
@@ -37,6 +38,17 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+    }
+
+    void Start()
+    {
+        maxHealth += GameManagment.healthBoost;
+        health = maxHealth;
+        hpBar.maxValue = maxHealth;
+        hpBar.value = health;
+        Debug.Log("Attack bonus is " + GameManagment.attackBoost);
+        moveSpeed += GameManagment.speedBoost;
+        
     }
 
     private void Update()
@@ -169,7 +181,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collider.gameObject.tag == "Enemy")
         {
-            health -= 1;
+            health -= 1 + GameManagment.attackBoost;
             Debug.Log(health);
         }
     }

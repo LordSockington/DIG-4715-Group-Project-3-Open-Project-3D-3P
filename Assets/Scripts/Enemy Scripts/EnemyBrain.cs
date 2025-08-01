@@ -31,13 +31,10 @@ public class EnemyBrain : MonoBehaviour
 
     public bool isRanged = false;
 
-    public delegate void coinDrop();
-    public static event coinDrop CoinCounting;
-
     void Awake()
     {
-        coinChance = Random.Range(1, coinChance+1);
-        Debug.Log("CoinChance is 1/" + coinChance);
+        coinChance = Random.Range(1, coinChance + 1);
+        //Debug.Log("CoinChance is 1/" + coinChance);
     }
 
     void Start()
