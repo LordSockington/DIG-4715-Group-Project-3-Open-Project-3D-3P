@@ -70,6 +70,14 @@ public class LevelSwitching : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1f;
+    }
+
     public void OpenHowToPlay()
     { 
         pauseMenu.SetActive(false);
