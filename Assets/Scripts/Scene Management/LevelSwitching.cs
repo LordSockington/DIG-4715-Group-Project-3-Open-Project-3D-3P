@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelSwitching : MonoBehaviour
 {
+    public GameObject pauseMenu;
+    public GameObject howToPlayScreen;
+
     public void ReturnToMenu()
     {
         Time.timeScale = 1f;
@@ -24,6 +27,7 @@ public class LevelSwitching : MonoBehaviour
         SceneManager.LoadScene("Western");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Time.timeScale = 1f;
     }
 
     public void LoadSentaiLevel()
@@ -31,6 +35,7 @@ public class LevelSwitching : MonoBehaviour
         SceneManager.LoadScene("Sentai");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Time.timeScale = 1f;
     }
 
     public void LoadNoirLevel()
@@ -38,6 +43,19 @@ public class LevelSwitching : MonoBehaviour
         SceneManager.LoadScene("Noir");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Time.timeScale = 1f;
+    }
+
+    public void OpenHowToPlay()
+    { 
+        pauseMenu.SetActive(false);
+        howToPlayScreen.SetActive(true);
+    }
+
+    public void BackToPause()
+    {
+        pauseMenu.SetActive(true);
+        howToPlayScreen.SetActive(false);
     }
 
     public void QuitGame()

@@ -8,6 +8,8 @@ public class GameManagment : MonoBehaviour
 
     public static bool westernHat, sentaiHat, noirHat;
 
+    public static int coins = 0;
+
     void Awake()
     {
         //If game manager does not exist, do this:
@@ -26,22 +28,34 @@ public class GameManagment : MonoBehaviour
         WesternHat.WesternHatGot += LevelWesternDone;
         SentaiHat.SentaiHatGot += LevelSentaiDone;
         NoirHat.NoirHatGot += LevelNoirDone;
-
+        EnemyBrain.CoinCounting += CoinCounter;
     }
 
     void LevelWesternDone()
     {
         westernHat = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void LevelSentaiDone()
     {
         sentaiHat = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void LevelNoirDone()
     {
         noirHat = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    void CoinCounter()
+    { 
+        coins++;
+        Debug.Log("Number of coin is: " + coins);
     }
 
 }
