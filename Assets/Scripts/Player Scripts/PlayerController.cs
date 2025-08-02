@@ -65,8 +65,6 @@ public class PlayerController : MonoBehaviour
                 attackTimer = 1;
         }
 
-        Debug.Log(IsGrounded());
-
         vertical = playerCam.transform.forward;
         horizontal = playerCam.transform.right;
 

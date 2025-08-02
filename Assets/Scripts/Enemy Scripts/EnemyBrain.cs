@@ -40,6 +40,7 @@ public class EnemyBrain : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        animator = GetComponent<Animator>();
 
         if (player == null)
         {
