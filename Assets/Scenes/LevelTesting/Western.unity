@@ -48235,6 +48235,10 @@ PrefabInstance:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 278561042}
+    - target: {fileID: 8753124849276672575, guid: 53344da8d152f99428dc8c1fe83c9c76, type: 3}
+      propertyPath: acceleration
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
