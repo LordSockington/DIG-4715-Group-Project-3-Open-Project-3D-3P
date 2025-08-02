@@ -65,6 +65,8 @@ public class PlayerController : MonoBehaviour
                 attackTimer = 1;
         }
 
+        Debug.Log(IsGrounded());
+
         vertical = playerCam.transform.forward;
         horizontal = playerCam.transform.right;
 
@@ -119,7 +121,7 @@ public class PlayerController : MonoBehaviour
     // Check for player contact with the ground to initiate a jump.
     private bool IsGrounded()
     {
-        return Physics.Raycast(transform.position, Vector3.down, distToGround);
+        return Physics.Raycast(transform.position + new Vector3(0,.1f,0), Vector3.down, distToGround);
     }
 
     // Adjusts rotation of player character
@@ -142,9 +144,6 @@ public class PlayerController : MonoBehaviour
 
         xzVelocity = Vector3.ClampMagnitude(xzVelocity, maxSpeed);
 
-        Debug.Log(hasJumped);
-        Debug.Log(currentVelocity.y);
-
         if(hasJumped && currentVelocity.y < 0)
         {
             yVelocity *= 1.01f;
@@ -161,7 +160,7 @@ public class PlayerController : MonoBehaviour
 
         if (movement == Vector3.zero && IsGrounded())
         {
-            rb.linearVelocity = new Vector3(0, verticalVelocity, 0);
+            rb.linearVelocity = new Vector3(0, currentVelocity.y, 0);
         }
     }
 
@@ -196,7 +195,6 @@ public class PlayerController : MonoBehaviour
         if (collider.gameObject.tag == "Enemy")
         {
             health -= 1 + GameManagment.attackBoost;
-            Debug.Log(health);
             hpBar.value = health;
         }
     }
