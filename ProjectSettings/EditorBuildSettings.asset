@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Finished Scenes/TitleScreen.unity
+    guid: 5062293b532ef4343898f959efce0ebc
+  - enabled: 1
+    path: Assets/Scenes/Finished Scenes/OpeningScene.unity
+    guid: a4bcd30b48e38a747a81fd4c88661b80
+  - enabled: 1
     path: Assets/Scenes/Finished Scenes/MainMenu.unity
     guid: a792b7e21ad15f24ca2ec9a7c3a27c27
   - enabled: 0
@@ -38,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Finished Scenes/LoseScreen.unity
     guid: ffa9520d99b51e84cb2ac92ec756cf2e
+  - enabled: 1
+    path: Assets/Scenes/Finished Scenes/Shop.unity
+    guid: db213333263830a488f187b6e8e46dba
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 8e042777af06be4498adc4d5855804bd, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
