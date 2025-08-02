@@ -56,7 +56,7 @@ public class LevelSwitching : MonoBehaviour
 
     public void LoadSentaiLevel()
     {
-        SceneManager.LoadScene("Sentai");
+        SceneManager.LoadScene("Kaiju");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1f;
