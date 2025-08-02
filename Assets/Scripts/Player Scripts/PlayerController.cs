@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
 
     public float jumpForce = 5;
-    public float moveSpeed = 1;
+    public float acceleration = 1;
     public float maxSpeed = 1;
     public float rotationSpeed = 0;
 
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         hpBar.maxValue = maxHealth;
         hpBar.value = health;
         Debug.Log("Attack bonus is " + GameManagment.attackBoost);
-        moveSpeed += GameManagment.speedBoost;
+        maxSpeed += GameManagment.speedBoost;
     }
 
     private void Update()
@@ -136,7 +136,7 @@ public class PlayerController : MonoBehaviour
         Vector3 moveDirection = vertical * moveInput.y + horizontal * moveInput.x;
         Vector3 movement = new Vector3(moveInput.x, 0.0f, moveInput.y);
 
-        rb.AddForce(moveDirection * moveSpeed, ForceMode.Acceleration);
+        rb.AddForce(moveDirection * acceleration, ForceMode.Acceleration);
 
         Vector3 currentVelocity = rb.linearVelocity;
         Vector3 xzVelocity = new Vector3(currentVelocity.x, 0f, currentVelocity.z);
