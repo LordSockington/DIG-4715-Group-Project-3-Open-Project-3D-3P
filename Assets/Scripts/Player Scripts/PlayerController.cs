@@ -49,7 +49,6 @@ public class PlayerController : MonoBehaviour
         hpBar.value = health;
         Debug.Log("Attack bonus is " + GameManagment.attackBoost);
         moveSpeed += GameManagment.speedBoost;
-        
     }
 
     private void Update()
@@ -198,6 +197,7 @@ public class PlayerController : MonoBehaviour
         {
             health -= 1 + GameManagment.attackBoost;
             Debug.Log(health);
+            hpBar.value = health;
         }
     }
 }
