@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 58ae2a23bc79c114d8a1b5ad2218f056, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 66.67
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 58ae2a23bc79c114d8a1b5ad2218f056, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.31
+      value: 1.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 58ae2a23bc79c114d8a1b5ad2218f056, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -78.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 58ae2a23bc79c114d8a1b5ad2218f056, type: 3}
       propertyPath: m_LocalRotation.w
@@ -225,8 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97e013db7ec8414f90ecf1a0e7a389e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
-  moveSpeed: 10
+  jumpForce: 7
+  acceleration: 20
   maxSpeed: 10
   rotationSpeed: 25
   health: 20
