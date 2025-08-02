@@ -29653,6 +29653,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4419383020102202314, guid: 23f625a42f25801449ea4dc242030d65, type: 3}
+      propertyPath: levelEnemy
+      value: 
+      objectReference: {fileID: 6753466691553986893, guid: 4953b998283a6a845849315e5bdfbac1, type: 3}
     - target: {fileID: 6692286131930120843, guid: 23f625a42f25801449ea4dc242030d65, type: 3}
       propertyPath: m_LocalPosition.x
       value: 66.919075
@@ -40266,6 +40270,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4419383020102202314, guid: 23f625a42f25801449ea4dc242030d65, type: 3}
+      propertyPath: levelEnemy
+      value: 
+      objectReference: {fileID: 6753466691553986893, guid: 4953b998283a6a845849315e5bdfbac1, type: 3}
     - target: {fileID: 6692286131930120843, guid: 23f625a42f25801449ea4dc242030d65, type: 3}
       propertyPath: m_LocalPosition.x
       value: 65.26
@@ -48348,6 +48356,14 @@ PrefabInstance:
     - target: {fileID: 5513505626955852166, guid: 53344da8d152f99428dc8c1fe83c9c76, type: 3}
       propertyPath: m_Name
       value: Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8572428291233965222, guid: 53344da8d152f99428dc8c1fe83c9c76, type: 3}
+      propertyPath: m_Height
+      value: 2.9124281
+      objectReference: {fileID: 0}
+    - target: {fileID: 8572428291233965222, guid: 53344da8d152f99428dc8c1fe83c9c76, type: 3}
+      propertyPath: m_Center.y
+      value: 1.5092776
       objectReference: {fileID: 0}
     - target: {fileID: 8753124849276672575, guid: 53344da8d152f99428dc8c1fe83c9c76, type: 3}
       propertyPath: hpBar
