@@ -808,8 +808,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   westernCanvas: {fileID: 1352571043}
-  sentaiCanvas: {fileID: 1187965790}
-  noirCanvas: {fileID: 1310014015}
+  sentaiCanvas: {fileID: 1310014015}
+  noirCanvas: {fileID: 1187965790}
 --- !u!1 &1124444522
 GameObject:
   m_ObjectHideFlags: 0
