@@ -10568,6 +10568,17 @@ Transform:
   - {fileID: 1023830204}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &443743151 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7919247512899211577, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+  m_PrefabInstance: {fileID: 1615094177}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &443770178 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6265336663903458295, guid: 4953b998283a6a845849315e5bdfbac1, type: 3}
@@ -37452,6 +37463,34 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7919247512899211577, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+      propertyPath: m_fontSize
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919247512899211577, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919247512899211577, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919247512899211577, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919247512899211577, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.8490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919247512899211577, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919247512899211577, guid: c7d08d92cc634d7478a32b90c77b2644, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190297
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -48300,6 +48339,10 @@ PrefabInstance:
       propertyPath: hpBar
       value: 
       objectReference: {fileID: 444104826}
+    - target: {fileID: 8753124849276672575, guid: 53344da8d152f99428dc8c1fe83c9c76, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 443743151}
     - target: {fileID: 8753124849276672575, guid: 53344da8d152f99428dc8c1fe83c9c76, type: 3}
       propertyPath: playerCam
       value: 

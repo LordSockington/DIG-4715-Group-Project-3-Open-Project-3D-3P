@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
     private bool hasJumped = false;
 
     public Slider hpBar;
+    public TextMeshProUGUI coinText;
 
     void Awake()
     {
@@ -92,6 +94,8 @@ public class PlayerController : MonoBehaviour
         {
             hasJumped = false;
         }
+
+        coinText.text = "Coins: " + GameManagment.coins.ToString();
     }
 
     void LateUpdate()
